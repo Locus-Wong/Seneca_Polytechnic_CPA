@@ -1,0 +1,9 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 17 May 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 1, I learned how to use static variables to keep track of their value changes throughout the program's lifetime. For example, in the display() function of the FoodOrder class, I declared a static variable called 'count' to keep track of how many times display() is called. Additionally, I learned how to use the keyword 'extern' to declare external linkage. For instance, I used 'extern' to declare two global variables named g_taxrate and g_dailydiscount in FoodOrder.h and defined them in FoodOrder.cpp. This allows the w1_p2.cpp module to access these two variables and change their values by including FoodOrder.h.
+
+Regarding dynamic memory management, in addition to following the Rule of Three (copy assignment operator, copy constructor, and destructor), I explicitly use delete[] on m_foodDescription to deallocate old memory before allocating new memory in the read() function of the FoodOrder class. This ensures that no memory leaks occur.
