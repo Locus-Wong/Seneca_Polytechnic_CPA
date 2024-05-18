@@ -1,0 +1,17 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 4 Feb 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In this workshop, I spend a day figuring out why it's important to be careful with dynamically allocated memory and what it means for how long the computer keeps track of it. As the course notes explain, unlike regular variables and objects, which stick around only within specific parts of the program, stuff stored in dynamic memory doesn't automatically disappear when I finish a section of our code. For example, if I use dynamic memory for things like guest names (guest.m_firstName and guest.m_lastName), that information stays in the computer's memory even after I am done with it. However, the special pointers (like guest.m_firstName and guest.m_lastName) that help me find this dynamic memory are scoped, and once they go out of scope, I lose the direct reference to those memory. This causes the allocated memory to become unreachable and impossible to get back until the computer finishes running our program, leading to memory leaks. Although I initially use dynamic memory to save the computer's resources, if I don't manage and free up this memory properly, it can cause problems. It doesn't just fail to make our program better; it actually makes things worse.
+
+And the difficulties I encountered were related to properly deallocating memory. I spent a significant amount of time exploring various methods to prevent memory leaks. The solution I found indicates that by requesting the exact amount of memory needed, the possibilities of memory leaks are dramatically decreased.
+
+For example, in the function void book(Room& room),  
+if (!room.m_guests) // check if room.m_guests is nullptr, then allocate new dynamic memory
+ {
+     room.m_guests = new Guest[room.m_noOfGuests];
+ }
+
+Without this checking condition, there may be redundant memory and the potential for a memory leak.

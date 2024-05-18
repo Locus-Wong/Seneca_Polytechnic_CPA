@@ -1,0 +1,11 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 19 Jan 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In part 1 of this workshop, I began implementing the new concept introduced in the course, which is compilation safeguards. Prior to this, I was unaware that each CPP file is compiled separately. I used to believe it was safe to include as many header files as possible, allowing any module to access and use functions from other modules if needed. However, after this workshop, I realized that without compilation safeguards, the same header file may be included multiple times in the same module. This situation could result in multiple definitions of variables and functions, leading to redeclaration errors and compilation issues.
+
+
+Moving on to part 2 of the workshop, I learned that the use of the backspace character (cout << "\b") can move the cursor backward by one position. However, for some reason, Xcode does not display the result properly. The output appears as: +--------------+Students' mark distribution while I expected the result to be: +-------Students' mark distribution-------+. It took me a few hours to realize that this issue is related to Xcode rather than my code or logic. When I compile the code in a different environment, such as Matrix, the results are displayed properly. On the other hand,  I also realized the importance of adding the "const" keyword whenever possible. This practice prevents unintentional changes to the value of variables. For example, in the function countOfMarkGroup that I declared and defined, I used the "const" keyword before StMark* marks and int noOfRecords. This ensures that inside the function, when counting the number of students for each mark group, the student marks or the number of loops will not be changed unintentionally.
+

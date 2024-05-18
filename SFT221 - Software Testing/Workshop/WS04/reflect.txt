@@ -1,0 +1,33 @@
+SFT221 - WS04
+Student Name: Tsz Wa Wong
+Student ID: 152181228
+Student email: twwong9@myseneca.ca
+Session : NBB
+
+1. What was the most useful technique you used to find the bugs? Why was it more useful than other techniques you tried?
+
+While the Visual Studio debugger can easily detect and locate some bugs, there are cases where the program doesn't terminate but produces incorrect results. These bugs are not easily found using only the debugger. For example, the debugger won't raise any error for bugs related to integer overflow. However, by inserting print statements inside each function call to track the value of certain variables, we can easily identify and address the bug. Consequently, I believe that inserting print statements is the simplest and most effective way to identify bugs in this workshop's simple program. Since the program is small, we don't need to use log files or create unit tests for bug detection.
+
+2a. What are the largest integer and double values you can store?
+A 32-bit signed integer has a maximum value of 2,147,483,647, while a 64-bit signed integer can store a maximum value of 9,223,372,036,854,775,807
+For double-precision floating-point numbers, the maximum representable value is typically around 1.8 × 10^308
+
+
+2b. Why is there a limit on the maximum value you can store in a variable?
+As data requires memory for storage, the data type we use (i.e. the limit) is to instruct the computer to allocate only a specific amount of memory for storing that data, aiming to achieve better memory efficiency.
+
+2c. If you exceed the maximum value an integer can hold, what happens? Explain why the format causes this to happen.
+If we exceed the maximum value that an integer can hold, we will encounter an integer overflow. This situation implies that the integer's value may 'wrap' back to the minimum representable value or to some other value within the range. These unexpected integer values can result in unpredictable behaviors or errors. Since each data type has a different maximum value it can hold, failure to choose an appropriate data type wisely can lead to an overflow.
+
+
+2d. What is the format for the storage of a floating point variable? How does this differ from the way an integer is stored?
+The way we store a floating-point variable, like a double, includes three parts: a sign bit, an exponent, and a fraction (also called mantissa). The sign bit tells us if the number is positive or negative, the exponent shows the power of 2 that multiplies the fraction, and the fraction holds the actual important digits of the number. 
+
+On the other hand, integers usually don't have a separate exponent or fraction. They use a fixed-width format with a sign bit for signed integers. In short, floating-point numbers have a more intricate structure to represent a broader range of values, covering fractions and very large or very small numbers.
+
+
+
+3. What is the default amount of stack memory that is given to a program when Visual Studio starts a C or C++ program? What is the default heap size? Did you hit any of the limits? If so, which one(s)? If you hit a limit, would increasing the amount of memory allocated to the program fix the problem? Justify your answer. Why do they limit the stack and heap size for a program?
+According to Microsoft, the default amount of stack memory given to a program when Visual Studio initiates a C or C++ program is 1MB, and the default heap size is also 1MB. I did hit limit for the stack size. There was stack overflow error prompted by Visual Studio debugger. As this hit was caused by infinite recursion, increasing the amount of memory allocated to the program would not fix the problem as infinite recursion can quickly consume the available stack space, leading to a stack overflow error.
+
+To manage computer resources well and keep things stable, it's crucial to set limits on stack and heap size. By doing this, the operating system can share memory among different programs without one program taking over everything. Also, compilers and runtime environments may assume a maximum size for the stack or heap. Having limits helps keep things consistent on different systems and makes sure programs follow these rules.

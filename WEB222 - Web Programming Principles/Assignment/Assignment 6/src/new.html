@@ -1,0 +1,97 @@
+<!-- /**
+ * WEB222 – Assignment 06
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name:       Tsz Wa Wong
+ *      Student ID: 152181228
+ *      Date:       14 Apr 2024
+ */ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Favorite Artist</title>
+    <link rel="stylesheet" href="./css/water.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Change this to your App's info -->
+
+      <h1>Bungee Music App <i class="fa-solid fa-music"></i></h1>
+    </header>
+
+    <form id="add-artist">
+      <h2>Add Your New Favorite Artist</h2>
+      <button id="submit" type="submit">Submit</button>
+      <button id="reset" type="reset">Reset</button>
+      <label for="artist-name">Artist Name:</label>
+      <input type="text" id="artist-name" name="artist-name" />
+
+      <label for="music-genre">Music Genre:</label>
+      <input type="text" list="genres" id="music-genre" name="music-genre" />
+      <datalist id="genres">
+        <option value="Country"></option>
+        <option value="Jazz"></option>
+        <option value="Pop"></option>
+        <option value="Rock"></option>
+        <option value="Hip Hop"></option>
+        <option value="Rhythm and blues"></option>
+        <option value="Classical"></option>
+        <option value="Electronic"></option>
+        <option value="Punk"></option>
+        <option value="Disco"></option>
+        <option value="Folk"></option>
+      </datalist>
+      <label for="artist-social">Social media (URLs):</label>
+      <input
+        class="input-url"
+        type="url"
+        id="artist-social"
+        name="artist-social"
+      />
+
+      <label for="add-reasons">Why you think we should add this artist?</label>
+      <textarea
+        id="add-reasons"
+        name="add-reasons"
+        rows="7"
+        cols="80"
+        style="resize: none"
+      ></textarea>
+
+      <input type="checkbox" />include explicit lyrics
+
+      <label for="artist-songs">Songs and videos (URLs):</label>
+      <input
+        class="input-url"
+        type="url"
+        id="artist-songs"
+        name="artist-songs"
+      />
+
+      <button id="add-url">Add</button>
+    </form>
+
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+    <!-- Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/1d08ff9f83.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

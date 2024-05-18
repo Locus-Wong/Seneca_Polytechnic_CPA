@@ -1,0 +1,11 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 09 Apr 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 10, I learned how to make a struct template that can handle two different types at once. When I made this struct template, which I called "Pair," I used a syntax that's similar to what we use for regular class templates.
+
+In another part of the workshop, I worked on a function template called "matches." This function needed to return the address of the first element in a new dynamic array. But the tricky part is that the elements in this array had to be of type Pair<T, U>. So, in the matches function template, I used Pair<T, U>* as the return type to make sure everything lined up correctly.
+
+Also, since both arr1 and arr2 were arrays whose types were specified by client code, so I had to indicate that they were arrays by adding [] to them.

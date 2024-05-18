@@ -1,0 +1,11 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 29 Mar 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In workshop 9, I focused on reviewing inheritance and the rule of three. This helped me understand how to manage allocated memory properly when copying and assigning derived objects. I also learned how to handle the copying and copy-assigning of the base class in the copy constructor and copy assignment of the derived class.
+
+For the rule of three, I reviewed how to localize common code in a private member function and call that member function from both the copy constructor and the copy assignment operator. I created a private member function called copy in both the base class and derived classes, and implemented the copy logic to its respective private data member.
+
+To manage the base class in the copy constructor and copy assignment of the derived class, I learned to explicitly call the copy assignment of the base class, such as `LibraryItem::operator=(other);`. I also learned to use a member initializer list to call the copy assignment of the base class, like `Book::Book(const Book& other) : LibraryItem(other)`, to properly copy and assign the base part of the derived object.

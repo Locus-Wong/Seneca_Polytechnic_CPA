@@ -1,0 +1,56 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  :TSZ WA WONG 
+Student ID#:152181228 
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Why do we try to use variables and macros to represent information rather than hardcode “magic” numbers (constant literals)? Using the details of this workshop, describe at least three advantages this provides us?
+
+It is because using macros can optimize the execution of program more when compared with using a constant literal, since there are no memory allocated to macros and macros are handled by the pre-processor. Also macros do not need the compiler generate and store extra code to the .exe files. What it does is simply replacing all the macroName inside the program with its statement, and this save some storage. Meanwhile, there is no local and global definitions for macros and macros always ignore scopes, which means they are always accessible to entire program like global variables. This is good for this workshop, since I need to access the value of MIN_YEAR, MAX_YEAR, LOG_DAYS in the entire program. If I create a new function that specifically records morning and evening ratings, and a new function that specifically records what the log date is, I do not need to declare additional variable inside the new function again, and if I somehow want to update the value, I simply can do this by only changing the value of macros in #define.
+
+2. The rating values entered by the user required iteration to perform basic validations with each iteration concentrated on testing for values to be within a specific range. Why do we not include additional logic that sums and performs the average? Instead, the sum and average logic is placed outside of any validation routine. Briefly explain two reasons why this is better design and refer to the details of this workshop to justify your answer.
+
+It is because placing the sum and average logic outside of any validation routine can help organize the code as doing all the calculation in one place is easy to update and maintain. Taking the sum logic for example, the loops will only break if the user input a valid value (0-5) for morning and evening rating respectively. This means we can add the ratings to the sum later, even the loops are ended. In this workshop, I put the statements morning_SumValue += morning_Value and evening_SumValue += evening_Value in a consecutive line for maintenance and update.
+
+do
+        {
+            printf("Morning rating (0.0-5.0): ");
+            scanf("%lf",&morning_Value);
+            if (morning_Value < 0.0 || morning_Value > 5.0)
+            {
+                printf("ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                loopRepeat = 1;
+            }
+            else
+            {
+                loopRepeat = 0;
+            }
+            
+        }while (loopRepeat == 1);
+            
+        do
+        {
+            printf("Evening rating (0.0-5.0): ");
+            scanf("%lf",&evening_Value);
+            if (evening_Value < 0.0 || evening_Value > 5.0)
+            {
+                printf("ERROR: Rating must be between 0.0 and 5.0 inclusive!\n");
+                loopRepeat = 1;
+            }
+            else
+            {
+                loopRepeat = 0;
+            }
+            
+        }while (loopRepeat == 1);
+       
+        morning_SumValue += morning_Value;
+        evening_SumValue += evening_Value;
+
+In addition, I do not calculate the average in any validation routine for every loop, since I can calculate the average only after all the loops are ended and sum values are provided. Therefore, placing average logic inside any validation routine does not make sense at all, while it not only consumes computer resources, but also do nothing to get the average rating.

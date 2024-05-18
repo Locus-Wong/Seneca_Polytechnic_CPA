@@ -1,0 +1,128 @@
+#main {
+  margin: 0px;
+  padding: 0px;
+  width: 1000px;
+}
+
+body {
+  background-color: rgb(6, 180, 100);
+  max-width: 1000px;
+  border: 4px dotted #3b674b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(240, 104, 6);
+}
+
+#newsletter {
+  margin-top: 30px;
+}
+
+input {
+  width: 15%;
+}
+
+button a {
+  color: black;
+}
+
+button a:hover {
+  text-decoration: none;
+}
+
+.input-url {
+  width: 40%;
+}
+
+#newsletter input {
+  margin-top: 5px;
+  width: 80%;
+}
+
+#selected-artist a {
+  color: #0b5a76;
+  text-decoration: none;
+}
+
+#newsletter button {
+  margin-top: 5px;
+  background-color: rgb(240, 104, 6);
+  color: white;
+}
+
+#newsletter button:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+header h1 {
+  font-family: "Bungee Spice", sans-serif;
+  margin-top: 50px;
+  font-style: normal;
+  font-size: 100px;
+}
+
+.banner {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+}
+
+label {
+  display: block;
+  overflow: hidden;
+}
+
+header p {
+  margin-top: 30px;
+}
+
+i {
+  color: rgb(255, 153, 0);
+}
+
+button:hover {
+  background-color: #d8cb39;
+  border: 1px solid black;
+}
+
+#cards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+}
+
+.card img {
+  border-radius: 20px;
+  width: 250px;
+}
+
+#cards div:nth-last-child(1) {
+  margin-right: auto;
+}
+
+.card:hover {
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.836);
+}
+
+.card .title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.annotation {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card span {
+  font-size: 15px;
+  color: #333;
+}

@@ -1,0 +1,9 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 20 Mar 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 8, I learned about the concept of a public empty virtual destructor. Initially, I thought it was declared as virtual ~iAccount() = 0;. However, I encountered issues when the program wouldn't run. Upon further investigation, I realized that the declaration in the interface iAccount was incorrect. It should have been virtual ~iAccount() {}; instead.
+
+The 'empty' in 'public empty virtual destructor' refers to the need to include {} for the body of the destructor, rather than using = 0 (which would make it a pure virtual destructor). In the case of declaring a pure virtual destructor in base class, since destructors are not typically overridden in derived classes but are instead called in reverse order, a pure virtual destructor (other than other pure virtual member functions) must have a specified destructor body, even if it is empty. In my case, not providing a destructor body when declaring it as a pure virtual destructor caused the program to fail to run previously.

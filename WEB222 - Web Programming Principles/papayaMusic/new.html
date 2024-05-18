@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-CA">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=500, initial-scale=1" />
+
+  <!-- Change this to your name-->
+  <meta name="author" content="Your Name" />
+
+  <title>PapayaMusic</title>
+  <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="https://kit.fontawesome.com/efeb3f9255.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <span id="logo"><i class="fa-solid fa-lemon"></i>Music</span>
+    <form>
+      <input id="search" placeholder="Search...">
+    </form>
+    <div class="links">
+      <button class="nav-link"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</button>
+      <button class="nav-link"><i class="fa-solid fa-guitar"></i>&nbsp;&nbsp;<a href="./new.html">Add New Artist</a></button>
+      <button class="nav-link"><i class="fa-solid fa-radio"></i>&nbsp;&nbsp;Radio</button>
+      <button class="nav-link"><i class="fa-solid fa-music"></i>&nbsp;&nbsp;Playlists</button>
+    </div>
+
+    <form id="newsletter" method="POST" action="https://httpbin.org/post">
+      <hr class="solid">
+
+      <label for="email">JOIN OUR EMAIL LIST</label>
+      <hr class="solid">
+
+      <div class="email-form">
+        <input id="email" placeholder="Enter email...">
+        <button id="join" type="submit">Join</button>
+      </div>
+
+    </form>
+
+
+  </div>
+
+
+  <div class="main">
+    <div class="itunes">
+      <div style="display: flex; justify-content: space-around;">
+        <button class="apple-button"><i class="fa-solid fa-shuffle"></i></button>
+        &nbsp;
+        <button class="apple-button"><i class="fa-solid fa-backward"></i></button>
+        &nbsp;
+        <button class="apple-button"><i class="fa-solid fa-play"></i></button>
+        &nbsp;
+        <button class="apple-button"><i class="fa-solid fa-forward"></i></button>
+        &nbsp;
+        <button class="apple-button"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+      <div class="apple-box">
+        <audio controls autoplay>  
+          <source src="./music/lobby.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+      <button class="apple-signin">Sign In</button>
+
+    </div>
+    <header>
+      <!-- Change this to your App's info -->
+      <h1>PapayaMusic</h1>
+      <p>Sweet tunez...</p>
+    </header>
+
+    <nav id="menu">
+      <!-- Dynamically create your menu category buttons here -->
+    </nav>
+
+    <hr />
+
+    <form id="add-artist">
+      <h2>Add New Artist</h2>
+      <label for="artist-name">Artist Name:</label>
+      <input type="text" id="artist-name" name="artist-name" required>
+      <label for="artist-genre">Genre:</label>
+      <input type="text" id="artist-genre" name="artist-genre" required>
+      <label for="artist-image">Image URL:</label>
+      <input type="text" id="artist-image" name="artist-image" required>
+      <button type="submit">Add Artist</button>
+    </form>
+    <!-- JavaScript Data Files --
+  </div>
+
+</body>
+
+</html>

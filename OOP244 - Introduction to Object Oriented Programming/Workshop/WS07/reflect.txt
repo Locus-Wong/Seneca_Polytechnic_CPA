@@ -1,0 +1,9 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 18 Mar 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In workshop 7, I learned about two key concepts in C++ inheritance. First, I learned how to shadow a member function defined in a base class within a derived class. For example, I shadowed the write and read methods from the BankAccount class within the SavingsAccount class. This means that for savings accounts, the program will read and write more data than for basic banking accounts.
+
+Secondly, I learned how to initialize the base part of a derived object when the base class does not have a default constructor, but only a constructor with parameters. In this case, we must use the derived class's constructor initialization list to pass the arguments to the base class's constructor to initialize the base part of the derived object. For instance, in the implementation of the SavingsAccount class's constructor, I passed variables (name, openDate, depInfo, balance) to the BankAccount class's constructor to initialize the base part of the SavingsAccount object. Inside the constructor, I manually initialized m_interest to interest and m_interestDate to interestDate. This approach ensures that all data members inside a derived object are properly initialized.

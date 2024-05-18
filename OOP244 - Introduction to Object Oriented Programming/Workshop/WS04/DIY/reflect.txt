@@ -1,0 +1,9 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 13 Feb 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In this workshop, I learned how to initialize the member variables when an object of the class is created. Normally, we use a constructor to explicitly initialize the member variables. However, if we add {} after a member variable declaration in a class, the member will also be initialized with the value enclosed in {} when we don't use a constructor to explicitly initialize that member variable. For example, in Part 2, I only needed to add strncpy (m_model, "Stratocaster", MOD_LEN); in the Guitar constructor to initialize the model name to its default value, as I already added {} for each member variable in the class definition.
+
+Also, I have learned there are two ways to set current object to an empty state. Normally, we can explicitly set each member variable to zero. However, we can also create a temporary object using the default constructor and then assign it to the current object using the copy assignment operator (operator=). It copies the state of the temporary object to the current object. Although both methods achieve the goal of setting an object to an empty state, the second method is more flexible and can be used for complex objects that require specific initialization logic.

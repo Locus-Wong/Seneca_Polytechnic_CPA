@@ -1,0 +1,98 @@
+
+> web222-assignment-1@6.0.0 test
+> jest --
+
+PASS src/problem-08.test.js
+  ● Console
+
+    console.log
+      value :/users/123/John%20Doe
+
+      at log (src/solutions.js:669:15)
+
+    console.log
+      value :/products/456/Special%3A%20Limited%20Edition
+
+      at log (src/solutions.js:669:15)
+
+    console.log
+      value :/users/123
+
+      at log (src/solutions.js:669:15)
+
+    console.log
+      resourceID string error
+
+      at log (src/solutions.js:645:21)
+
+    console.log
+      value :/users/123
+
+      at log (src/solutions.js:669:15)
+
+    console.log
+      value :/users/123/John%20Doe
+
+      at log (src/solutions.js:669:15)
+
+    console.log
+      value :/users/123/John%20Doe
+
+      at log (src/solutions.js:669:15)
+
+PASS src/problem-07.test.js
+PASS src/problem-04.test.js
+  ● Console
+
+    console.log
+      formatted: 2023/12/10
+
+      at log (src/solutions.js:366:15)
+
+    console.log
+      formatted: 10/12/2023
+
+      at log (src/solutions.js:369:15)
+
+    console.log
+      formatted: 12/10/2023
+
+      at log (src/solutions.js:372:15)
+
+    console.log
+      formatted: 2023/12/17
+
+      at log (src/solutions.js:366:15)
+
+    console.log
+      formatted: 2023/01/10
+
+      at log (src/solutions.js:366:15)
+
+    console.log
+      formatted: 2023/12/01
+
+      at log (src/solutions.js:366:15)
+
+    console.log
+      formatted: 2023/12/01
+
+      at log (src/solutions.js:366:15)
+
+    console.log
+      formatted: 2023/01/12
+
+      at log (src/solutions.js:366:15)
+
+PASS src/problem-03.test.js
+PASS src/problem-06.test.js
+PASS src/problem-01.test.js
+PASS src/problem-02.test.js
+PASS src/problem-05.test.js
+PASS src/problem-00.test.js
+
+Test Suites: 9 passed, 9 total
+Tests:       65 passed, 65 total
+Snapshots:   0 total
+Time:        0.581 s, estimated 1 s
+Ran all test suites.

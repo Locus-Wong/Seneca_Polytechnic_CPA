@@ -1,0 +1,9 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 21 Feb 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In workshop 5, I learned two crucial lessons. Firstly, I learned about the significance of the order of variables in a constructor's initialization list. It's essential to list the variables in the same order as they appear in the class definition. Failure to do so can result in a warning, such as 'seneca::Hero::m_powerLevel' will be initialized after [-Wreorder] int m_powerLevel.
+
+Secondly, I gained an understanding of the importance of performing deep assignment for pointer variables that hold dynamically allocated memory. In the operator+= overload function, I created a temporary object with a new power list using the 3-parameter constructor. Since the temporary object is destroyed after the scope by the destructor, failing to perform deep assignment can lead to the pointer m_powers in the current object becoming a dangling pointer, causing a memory leak. Therefore, it is crucial to create a copy assignment operator to prevent shallow assignment.

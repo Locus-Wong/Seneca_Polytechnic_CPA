@@ -1,0 +1,57 @@
+defaulting Box
+Enter the following values:
+10
+20
+----------------------------
+Getting information of an IOAble box from console:
+Height: 10
+Width: 20
+Display the IOAble box on console:
+****************************************
+****************************************
+****************************************
+****************************************
+****************************************
+****************************************
+****************************************
+****************************************
+****************************************
+****************************************
+
+Saving 10,20 in the output file.
+Dynamically allocating a Box and holding it in an IOAble pointer...
+defaulting Box
+Reading dimenstions from file using the IOAlbe pointer
+Dimentions:
+5,7
+What it looks like on screen:
+**************
+**************
+**************
+**************
+**************
+
+Now save it in the file...
+Reading the next dimenstions from file using the IOAble pointer
+Dimentions:
+7,4
+What it looks like on screen:
+********
+********
+********
+********
+********
+********
+********
+
+Save this one in the output file too...
+Close the file and display it...
+Content of "boxesOut.txt" file
+boxesOut.txt---------------------
+10,20
+5,7
+7,4
+---------------------------------
+Removing the box from memory using the IOAble pointer...
+Box(7,4) is gone!
+Box(10,20) is gone!

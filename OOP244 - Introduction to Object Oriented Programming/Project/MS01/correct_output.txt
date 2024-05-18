@@ -1,0 +1,95 @@
+Menu tester -----------------------------------------
+Enter the following values:
+abc
+1 (with a space after 1)
+1
+0
+2
+3
+-1
+0
+----------------------------
+Tester Options menu:
+1- Option one
+2- Option two
+0- Exit
+> abc
+Bad integer value, try again: 1
+Only enter an integer, try again: 1
+   Sub-menu of option one!
+   1- sub one
+   2- sub two
+   3- sub two
+   4- sub two
+   0- Exit
+   > 0
+   sub menu exit selected
+
+Tester Options menu:
+1- Option one
+2- Option two
+0- Exit
+> 2
+option two selected
+
+Tester Options menu:
+1- Option one
+2- Option two
+0- Exit
+> 3
+Invalid value enterd, retry[0 <= value <= 2]: -1
+Invalid value enterd, retry[0 <= value <= 2]: 0
+goodbye!
+Time tester -----------------------------------------
+E: 00:00
+D: 23:05
+C: 01:05
+
+operator-= .................
+  D        C      D-=C
+23:05 -= 01:05 = 22:00
+  C        D      C-=D
+01:05 -= 22:00 = 03:05
+
+operator- ..................
+  C       D      C-D
+03:05 - 22:00 = 05:05
+  C        D
+03:05    22:00
+
+operator*= .................
+C: 03:05
+ C *= 2
+06:10
+ C *= 12
+74:00
+
+Enter following values:
+abc
+12
+1.1
+1:1
+------------------------
+Time
+> abc
+Bad time entry, retry (HH:MM): 12
+Bad time entry, retry (HH:MM): 1.1
+Bad time entry, retry (HH:MM): 1:1
+you entered: 01:01
+
+Enter following value:
+30:0
+------------------------
+Time
+> 30:0
+you entered: 30:00
+
+Enter following value:
+1:1234
+------------------------
+Time
+> 1:1234
+you entered: 21:34
+Default dubugging start time: 08:00
+Custome debugging start time: 15:22
+Actual system time is: 21:14  << this will change at exection time

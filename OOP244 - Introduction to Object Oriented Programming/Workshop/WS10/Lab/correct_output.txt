@@ -1,0 +1,64 @@
+====================================================================
+|| Match tester for int and double arrays (double matched to int) ||
++------------+---------------+--------------------------------------
+| int value  | double value  |
++ ---------- + ------------- +
+|       322 <-> 322.00       |
+|         3 <->   3.00       |
++------------+---------------+
+
+===========================================================================
+|| Match tester for Book and int arrays (int matched to number of pages) ||
++--------------------------------------------------------------+------------+
+|                            Book                              |  int value |
++ ------------------------------------------------------------ + ---------- +
+|    C Programming Langauge,288, 26.96,progs: BSA,BSD,CPA,CPP <-> 288       |
+|  Learn Python Programming,554, 59.99,progs:     BTM,DSA,DAD <-> 554       |
+|  Pat Recog and Mach Learn,758,103.72,progs:         DSA,BSA <-> 758       |
++--------------------------------------------------------------+------------+
+
+============================================================================
+|| Match tester for Book and double arrays (double matched to book price) ||
++--------------------------------------------------------------+---------------+
+|                             Book                             |  double value |
++ ------------------------------------------------------------ + ------------- +
+|    C Programming Langauge,288, 26.96,progs: BSA,BSD,CPA,CPP <->  26.96       |
+|  Learn Python Programming,554, 59.99,progs:     BTM,DSA,DAD <->  59.90       |
+|  Pat Recog and Mach Learn,758,103.72,progs:         DSA,BSA <-> 103.72       |
+|    Mach Learn in Business,287, 37.95,progs:         BTM,BSD <->  37.95       |
++--------------------------------------------------------------+---------------+
+
+==========================================================================
+|| Match tester for Student and int arrays (int matched to student id)  ||
++--------------------------------------------------+---------------+------
+|                     Student                      |  int value    |
++ ------------------------------------------------ + ------------- +
+| 1001, Beans Yanson,BSD,mks:      56.5,62.2,71.1 <-> 1001         |
+| 2022,Sally Sparrow,CPP,mks:      80.0,70.1,66.5 <-> 2022         |
++--------------------------------------------------+---------------+
+
+===================================================================================
+|| Match tester for Student and double arrays (double matched to average marks)  ||
++--------------------------------------------------+---------------+---------------
+|                      Student                     |  Double value |
++ ------------------------------------------------ + ------------- +
+| 1026,  Mugsy Brown,CPA,mks:                88.8 <-> 88.80        |
++--------------------------------------------------+---------------+
+
+===========================================================================================================
+|| Match tester for Student and Book arrays (student program matched to programs in which book is used)  ||
++--------------------------------------------------+--------------------------------------------------------------+
+|                       Student                    |                           Book                               |
++ ------------------------------------------------ + ------------------------------------------------------------ +
+| 1001, Beans Yanson,BSD,mks:      56.5,62.2,71.1 <->    C Programming Langauge,288, 26.96,progs: BSA,BSD,CPA,CPP |
+| 1001, Beans Yanson,BSD,mks:      56.5,62.2,71.1 <->    Mach Learn in Business,287, 37.95,progs:         BTM,BSD |
+| 1005,Archie Mollen,BSA,mks:           59.9,80.0 <->    C Programming Langauge,288, 26.96,progs: BSA,BSD,CPA,CPP |
+| 1005,Archie Mollen,BSA,mks:           59.9,80.0 <->  Pat Recog and Mach Learn,758,103.72,progs:         DSA,BSA |
+| 1026,  Mugsy Brown,CPA,mks:                88.8 <->    C Programming Langauge,288, 26.96,progs: BSA,BSD,CPA,CPP |
+| 2022,Sally Sparrow,CPP,mks:      80.0,70.1,66.5 <->    C Programming Langauge,288, 26.96,progs: BSA,BSD,CPA,CPP |
+| 2033,  Maulin Codi,BTM,mks:           58.7,64.4 <->  Learn Python Programming,554, 59.99,progs:     BTM,DSA,DAD |
+| 2033,  Maulin Codi,BTM,mks:           58.7,64.4 <->    Mach Learn in Business,287, 37.95,progs:         BTM,BSD |
+| 1055,  John Bolton,DSA,mks:      81.0,76.5,72.1 <->  Learn Python Programming,554, 59.99,progs:     BTM,DSA,DAD |
+| 1055,  John Bolton,DSA,mks:      81.0,76.5,72.1 <->  Pat Recog and Mach Learn,758,103.72,progs:         DSA,BSA |
+| 2130,  Joe Jackson,DAD,mks: 50.0,61.0,70.9,81.0 <->  Learn Python Programming,554, 59.99,progs:     BTM,DSA,DAD |
++--------------------------------------------------+--------------------------------------------------------------+

@@ -1,0 +1,11 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 07 April 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In reflecting on my project, I encountered a significant challenge: not all unexpected outcomes are due to coding errors. For instance, during milestone 5.1, I faced an issue where the application couldn't load a CSV file. Initially, I meticulously reviewed my code for any logical errors, but when I couldn't find any, I began to suspect that the problem might be related to file linking or sourcing. I then re-downloaded all the CSV and backup files, added them to the project repository, and verified their contents. Despite these efforts, the issue persisted. I repeated this process several times, also closing and reopening Visual Studio, but to no avail.
+
+It was only by chance that I discovered the solution: I accidentally closed the CSV file and found that the issue was resolved. This entire process took me an hour to resolve. This experience taught me the importance of considering all possible sources of issues, even when the code appears to be correct.
+
+Meanwhile, completing the project helped me understand more about object-oriented programming (OOP) and the differences between C++ and C. One significant concept I learned about was inheritance, which played a major role in our project. Inheritance is the process where one class derives properties and behaviour from another class, much like how a child inherits traits from their parent. In our project, this meant that objects could possess their own unique traits while also inheriting traits from a "parent" object. By utilizing inheritance, the compiler can determine which method to call. This process is crucial for achieving "true" polymorphism, where different classes can have methods with the same name but different implementations. This is in contrast to "fake" polymorphism, which is achieved through function overloading.

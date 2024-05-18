@@ -1,0 +1,76 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #4
+Full Name  : TSZ WA WONG
+Student ID#: 152181228
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. With the completion of this workshop, you must have begun to appreciate why code formatting is important. Explain how you made your code – especially the iteration and selection logic parts – easy to read and maintain.
+
+I used structured programming principles when I was doing the iteration and selection logic parts. I enclosed a set of statements in a pair of curly braces (code blocks) for nested if else construct, while construct and do while construct to ensure that the execution order of codes is easy to read and what I want. Otherwise, it is unclear which statement will be executed in an iteration and selection.
+2. Nested logic is an important feature of programming in any language. Identify and briefly discuss the biggest impact on how this workshop could be coded if nesting were not possible.
+
+If nesting was not possible, the way we can code this workshop will become more tedious for programmers who develop that software. However, the code should be more easy to read and understand by other programmers who maintain it since the levels of indentation is minimized and conditions for each statement is clearly shown. 
+
+For example, I used multiple exclusive conditions in Part 2.
+
+if (numOfOranges> 0)
+        {
+            while (numOfOranges > 0)
+            {
+                printf("Pick some ORANGES... how many did you pick? : ");
+                scanf("%d",&numOfOranges_Pick);
+                if (numOfOranges_Pick > numOfOranges)
+                {
+                    printf("You picked too many... only %d more ORANGE(S) are needed.\n",numOfOranges);
+                }
+                else if (numOfOranges_Pick <= 0)
+                {
+                    printf("ERROR: You must pick at least 1!\n");
+                }
+                else if (numOfOranges_Pick == numOfOranges)
+                {
+                    printf("Great, that's the oranges done!\n\n");
+                    numOfOranges = 0;
+                }
+                else
+                {
+                    printf("Looks like we still need some ORANGES...\n");
+                    numOfOranges -= numOfOranges_Pick;
+                }
+            }
+        }
+
+The above codes we can change to the following: 
+
+while (numOfOranges > 0){
+printf("Pick some ORANGES... how many did you pick? : ");
+scanf("%d",&numOfOranges_Pick);
+if ((numOfOranges> 0) && (numOfOranges_Pick > numOfOranges))
+{
+	printf("You picked too many... only %d more ORANGE(S) are needed.\n",numOfOranges);
+}
+if ((numOfOranges> 0) && (numOfOranges_Pick <= 0))
+{
+	printf("ERROR: You must pick at least 1!\n");
+}
+if ((numOfOranges> 0) && (numOfOranges_Pick == numOfOranges))
+{
+	printf("Great, that's the oranges done!\n\n");
+	numOfOranges = 0;
+}
+if ((numOfOranges> 0) && (numOfOranges_Pick < numOfOranges) && (numOfOranges_Pick > 0) && (numOfOranges_Pick != numOfOranges))
+{
+	printf("Looks like we still need some ORANGES...\n");
+	numOfOranges -= numOfOranges_Pick;
+}
+}
+3. Consider the following scenario: you are programming logic that requires a user to input a value between 1 and 5, and for each value within that range, you had to perform something unique. You would have to apply selection to validate the entered values so you can implement the given logic for a specific entered range value. Explain why is it inefficient to achieve this using a series of “if” optional path constructs instead of the preferred “if/else if…” alternative path logic?
+
+In this case, if using a series of “if” statements, there are 5 conditions needed for computers to check even though a condition is fulfilled. For example, the computer will also check if the input value is equal to 5 or not, even though it already knows that the input value is 3 a few moments ago by checking. However, if using a series of "if/else if" statements, the computer will skip all remaining else if and else conditions once a condition returns the value TRUE. And this make it more efficient when comparing with using a series of “if” statements.
+

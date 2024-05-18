@@ -1,0 +1,12 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 7 Feb 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+//Some parts of the code in Utils are references to my professor's.
+
+One of the difficulties I encountered during the workshop was figuring out how to access members of one class from within another class. Specifically, I needed to obtain the price of each order and accumulate them to calculate the total price. The challenge arose because the price of each order (m_Price) was a member of the Icecream class, while the total price (m_totalPrice) was declared in the Vendor class.
+
+To address this issue, I needed to find a way to access the price of each order (m_Price) within a member function of the Vendor class. The solution I learned from the workshop involved making the m_Price member variable public, allowing it to be accessed from outside the class. Additionally, since I had an Icecream type pointer (m_orders) pointing to the first element of a dynamically allocated array of Icecream objects, I could utilize this pointer in a loop to access each Icecream object and its member variables, such as m_Price.
+
+While this approach solved the immediate problem, I believe there may be better methods to solve this problem, such as using getter methods or passing objects as arguments to member functions. Making members public should be done with caution as it exposes them to direct access from outside the class, which can bypass encapsulation and lead to unintended consequences. Such bugs are not easy to find and fix.

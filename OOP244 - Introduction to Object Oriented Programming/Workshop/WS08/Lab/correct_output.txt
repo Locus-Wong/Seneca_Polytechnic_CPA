@@ -1,0 +1,41 @@
+******************************
+DISPLAY Accounts for Angelina:
+******************************
+Account type: Savings
+Balance: $400.00
+Interest Rate (%): 5.00
+-----------------------
+Account type: Chequing
+Balance: $400.00
+Per Transaction Fee: 0.50
+Monthly Fee: 2.00
+******************************
+
+DEPOSIT $2000 into Angelina Accounts ...
+WITHDRAW $1000 and $500 from Angelina's Accounts ...
+
+******************************
+DISPLAY Accounts for Angelina:
+******************************
+Account type: Savings
+Balance: $1400.00
+Interest Rate (%): 5.00
+-----------------------
+Account type: Chequing
+Balance: $1899.00
+Per Transaction Fee: 0.50
+Monthly Fee: 2.00
+******************************
+
+******************************
+DISPLAY Accounts for Angelina:
+******************************
+Account type: Savings
+Balance: $1470.00
+Interest Rate (%): 5.00
+-----------------------
+Account type: Chequing
+Balance: $1897.00
+Per Transaction Fee: 0.50
+Monthly Fee: 2.00
+******************************

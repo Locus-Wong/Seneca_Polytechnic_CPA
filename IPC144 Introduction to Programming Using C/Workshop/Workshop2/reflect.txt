@@ -1,0 +1,55 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  :TSZ WA WONG 
+Student ID#:152181228 
+Email      :twwong9@myseneca.ca 
+Section    :NFF 
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1. The reason why price1 and the corresponding converted cent value does not
+   properly represent the intended value is the float only has 32 bits, consisting
+   of one sign bit, an 8-bit exponent and a 23-bit significand, which makes the 
+   total precision of float only has about 7 decimal digits, while on the other
+   hand, double has 64 bits with the precision of about 16 decimal digits. Therefore,
+   there is no precision issue for price2 and price4.
+
+   And for the reason why price3 can still represent the intended value even though
+   price3 is using float data type is because when you convert the values of 17.96 
+   and 17.98 to binary, you can find that the number of digits in the binary form
+   of 17.98 is smaller than that of 17.96, which means the computer needs to use
+   less memory or space to store the exact value of 17.98(price3) when compared to the 
+   exact value of 17.96(price1). As a result, the price3 can still show the intended
+   value correctly in this case.
+
+2. For the example 1, there is a coercion. The decimal point in money / 100.0 
+   implicitly promote the money from integer type to double.
+
+   For the example 2, there is a cast. The double in money / (double) 100 
+   explicitly promote the 100 from integer type to double. 
+
+   For the example 3, there is a cast. The double in (double)money / 100 
+   explicitly promote money from integer type to double.
+
+3.a) The value of the variable result is 72. When the compiler execute the command
+     result = money / 100, the value of the variable result is reassigned to the
+     integer value of money / 100, which is equivalent to (int) 7245 / 100 (i.e. 72)
+     since the data type of result and money is integer.
+
+3.b) The value for sample 1: $0.00
+     The value for sample 2: $72
+     The value for sample 3: $0.00
+     The value for sample 4: $72
+
+3.c) It is because that the whole variable money / 100 in the sample 1 and the variable
+     result in the sample 3 have interger data type while the format specifies the type
+     of argument should be double. As a result, the compiler just ignore its stored value
+     and display the 0 value.
+    

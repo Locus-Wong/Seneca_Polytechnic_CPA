@@ -1,0 +1,12 @@
+SFT221 workshop 3 Reflection:
+
+
+Student Name: Tsz Wa Wong
+Student ID: 152181228
+Student email: twwong9@myseneca.ca
+Session: NBB
+
+
+To ensure that the customer enters a non-empty string, my function will return 0/false if an empty string is provided, prompting the user to input a valid string. In the unit test project, I will supply an empty string to my function and employ Assert::AreEqual(0, result); to verify if the function correctly identifies an empty string. The expected result should be 0, and it should match the actual result, indicating a successful test.
+
+For testing the generation of correct prompts by my functions, I plan to modify the functions to return a string (the prompt) if the input is deemed invalid; otherwise, they will return 0 for valid input. Subsequently, I will use Assert.AreEqual("correct prompt", result); to assess whether my functions can generate the correct prompts when necessary. The expected result should be the correct prompt, and it should be identical to the actual result, indicating a successful test.

@@ -1,0 +1,11 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 13 Mar 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In workshop 6, I learned how to use localization to avoid code duplication in the implementation of the copy constructor and copy assignment operator for the `EmailFile` class. First, I declared a private member function `void copy(const EmailFile& src);` in the `EmailFile` class. Then, I included the copy logic in its definition. This involves checking if the source object has valid values, resizing the dynamically allocated Cstring to the size of the source object, and setting the content of the Cstrings to be equal to the content of the Cstrings in the source object.
+
+With this setup, I can simply call the `copy` function in the copy constructor. In the copy assignment operator, I first check if the current object is not equal to the source object, then set the current object to the empty state, and call the `copy` function sequentially. This approach helps to centralize the copy logic and avoid repeating code in both the copy constructor and copy assignment operator.
+
+Additionally, I learned how to use ofstream to write text to a file. I learned to check if the file is successfully opened using file.is_open() and how to properly close an opened file using file.close().

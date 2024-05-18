@@ -1,0 +1,86 @@
+Script started on Thu 29 Feb 2024 11:26:41 PM EST
+==180157== Memcheck, a memory error detector
+==180157== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==180157== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==180157== Command: ws.exe
+==180157== 
+Enter The following:
+-------------------
+John Doe
+abc
+100
+123123123
+-------------------
+Name: John Doe
+OHIP: abc
+Bad integer value, try again: 100
+Invalid value enterd, retry[100000000 <= value <= 999999999]: 123123123
+Sections 1 and 2 should match:
+
+1- Your output on screen:
+Ticket No: 24, Issued at: 08:00
+John Doe, OHIP: 123123123
+2- The output should be:
+Ticket No: 24, Issued at: 08:00
+John Doe, OHIP: 123123123
+
+1- Your comma separated and linear ouput:
+W,John Doe,123123123,24,08:00
+John Doe.............................................123123123   24 08:00
+2- The comma-separated and linear ouput should be:
+W,John Doe,123123123,24,08:00
+John Doe.............................................123123123   24 08:00
+
+Reading the first csv from the data file
+Sections 1 and 2 should match: 
+
+1- Your output on screen:
+Ticket No: 14, Issued at: 12:54
+A name that is way way way way way way way way way, OHIP: 444444444
+
+2- The output should be:
+Ticket No: 14, Issued at: 12:54
+A name that is way way way way way way way way way, OHIP: 444444444
+
+Reading the remaining 4 and save it in ms3out.csv:
+Sorting based on patient's name
+Displaying sorted patient records
+Printing 5 patients:
+Ticket No: 18, Issued at: 12:53
+David Mason, OHIP: 111111111
+
+Ticket No: 16, Issued at: 12:51
+Nick Gilmour, OHIP: 222222222
+
+Ticket No: 17, Issued at: 12:52
+Rick Waters, OHIP: 333333333
+
+Ticket No: 15, Issued at: 12:50
+Roger Wright, OHIP: 333333333
+
+Invalid Patient Record
+
+---------------------------------
+
+ms3out.csv-----------------------
+W,Roger Wright,333333333,15,12:50
+W,Nick Gilmour,222222222,16,12:51
+W,Rick Waters,333333333,17,12:52
+W,David Mason,111111111,18,12:53
+---------------------------------
+Testing operator== overloads: 
+Success!
+Success!
+Testing Ticket time and number: 
+W, Ticket Time: 12:52
+W, Ticket number: 17
+==180157== 
+==180157== HEAP SUMMARY:
+==180157==     in use at exit: 0 bytes in 0 blocks
+==180157==   total heap usage: 34 allocs, 34 frees, 99,582 bytes allocated
+==180157== 
+==180157== All heap blocks were freed -- no leaks are possible
+==180157== 
+==180157== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Thu 29 Feb 2024 11:27:01 PM EST

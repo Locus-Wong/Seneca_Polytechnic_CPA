@@ -1,0 +1,27 @@
+///////////////////////////////////////////////////////////////////////////
+
+                              Reflection
+                             Workshop - #1
+Full Name  : TSZ WA WONG
+Student ID#: 152181228
+Email      : twwong9@myseneca.ca
+Section    : NFF
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. 	I have basic programming experience in C#. 
+	And I have studied how to make mobile games using Unity on my own for 1 year.
+	Until now, one mobile game is successfully built by myself.
+
+2. 	C text file is a file which has many functions/commands human want their computer to execute. 
+	As those functions/commands which use high-level programming language cannot be directly understood by computer,
+	they must be compiled to machine code first to let computers understand and then execute.
+
+
+3. 	I do hope to learn the fundamental knowledge of C language from this course, and try to push myself to median level during my spare time if possible. 
+	I will expect I can acquire sufficient help from teacher if needed.

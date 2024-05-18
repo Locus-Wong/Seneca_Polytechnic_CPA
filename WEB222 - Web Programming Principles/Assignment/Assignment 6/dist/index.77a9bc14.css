@@ -1,0 +1,66 @@
+#main {
+  width: 900px;
+  margin: 10px;
+  padding: 10px;
+}
+
+header h1 {
+  margin-top: 50px;
+}
+
+header p {
+  margin-top: 30px;
+}
+
+i {
+  color: red;
+}
+
+button:hover {
+  background-color: #a6a6b5;
+}
+
+#cards {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+}
+
+.card img {
+  border-radius: 20px;
+  width: 250px;
+}
+
+#cards div:last-child {
+  margin-right: auto;
+}
+
+.card:hover {
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #000000d5;
+}
+
+.card .title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.annotation {
+  justify-content: space-around;
+  width: 100%;
+  display: flex;
+}
+
+.card span {
+  color: #333;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=index.77a9bc14.css.map */

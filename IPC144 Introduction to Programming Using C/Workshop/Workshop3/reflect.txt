@@ -1,0 +1,84 @@
+///////////////////////////////////////////////////////////////////////////
+
+                              Reflection
+
+                          Workshop - #3 (P2)
+
+Full Name  : TSZ WA WONG
+
+Student ID#: 152181228
+
+Email      : twwong9@myseneca.ca
+
+Section    : NFF
+
+
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+
+shared with any other student or 3rd party content provider. This submitted
+
+piece of work is entirely of my own creation.
+
+///////////////////////////////////////////////////////////////////////////
+
+1. Determining the customer preference based on the number of servings to the available coffee bag weights required a more complex logical expression. Copy your submitted code for only this part of the logic, and explain the following:A) How many relational expressions did you use and identify each of them.B) How many logical expressions did you use and identify each of them.
+
+For product 1
+((preferDailyServings >=1 && preferDailyServings <= 4)&& (bagWeight_1<=250))||
+((preferDailyServings >=5 && preferDailyServings <= 9)&& (bagWeight_1>250 && bagWeight_1<= 500 ))||
+((preferDailyServings >=10) && (bagWeight_1>500 && bagWeight_1<=1000))
+
+For product 2
+((preferDailyServings >=1 && preferDailyServings <= 4)&& (bagWeight_2<=250))||
+((preferDailyServings >=5 && preferDailyServings <= 9)&& (bagWeight_2>250 && bagWeight_2<= 500 ))||
+((preferDailyServings >=10) && (bagWeight_2>500 && bagWeight_2<=1000))
+
+For product 3
+((preferDailyServings >=1 && preferDailyServings <= 4)&& (bagWeight_3<=250))||
+((preferDailyServings >=5 && preferDailyServings <= 9)&& (bagWeight_3>250 && bagWeight_3<= 500 ))||
+((preferDailyServings >=10) && (bagWeight_3>500 && bagWeight_3<=1000))
+
+A) The total number of relational expressions I used is 30 (10 for each product).
+9 greater than or equal to (3 >= for each product)
+15 less than or equal to (5 <= for each product)
+6 greater than (2 > for each product)
+
+B) The total number of logical expression I used is 27 (9 for each product).
+21 both operands are true (7 && for each product)
+6 one of the operands is true (2 || for each product)
+2. Referring to Part-1 output #9, show how that logic can be coded in TWO correct ways, one applying DeMorgan’s Law and the other way not using DeMorgan’s Law. Also, identify what method you used in your submitted answer for Part-1.
+
+Not using DeMorgan's Law:
+printf("\n7. Based on product ID, product 1 is unique -> %d\n",
+productID_1!=productID_2 && productID_1 !=productID_3);
+printf("\n8. Based on product ID, product 2 is unique -> %d\n",productID_2!=productID_1 && productID_2!=productID_3);
+printf("\n9. Based on product ID, product 3 is unique -> %d\n",productID_3 !=productID_1 && productID_3!=productID_2);
+
+DeMorgan's Law:
+printf("\n7. Based on product ID, product 1 is unique -> %d\n",
+!((productID_1 == productID_2) || (productID_1 == productID_3)));
+printf("\n8. Based on product ID, product 2 is unique -> %d\n",
+!((productID_2 == productID_1) || (productID_2 == productID_3)));
+printf("\n9. Based on product ID, product 3 is unique -> %d\n",
+!((productID_3 == productID_1) || (productID_3 == productID_2)));
+    
+
+The method I used in the submitted answer was not using DeMorgan's Law.
+
+3. Using the variables you used in Part-2, demonstrate two ways you can organize them, so it is optimized for easy to maintain code and contributes towards clarity in how data is stored in the program.
+
+I organize variables by parts and data types to maintain code and contributes towards clarity in how data is stored in the program. And I declare all the constant variables in the fist line, so that I cam locate them more easily if I don't remember the constant value I set or I want to edit the value.
+
+I first declare variables for the product information part. 
+const double GRAMS_IN_LBS = 453.5924; // constant variable of type double to store the factor when converting from grams to pounds
+char sellCoffeeType_1,sellCoffeeType_2,sellCoffeeType_3; // variables of type char to store coffee type of product 1, 2, 3
+char servedWithCream_1,servedWithCream_2,servedWithCream_3; // variables of type char to store serving suggestion of product 1, 2, 3
+int bagWeight_1,bagWeight_2,bagWeight_3; // variables of type int to store coffee package weight of product 1, 2, 3
+
+Then I declare variables for the customer preference part.
+char preferCoffeeStrength; // variable of type char to store the customer preferred coffee strength.
+char preferWithCream; // variable of type char to store whether the customer prefer with cream or not.
+int preferDailyServings; // variable of type int to store the customer daily servings.
