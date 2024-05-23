@@ -1,0 +1,39 @@
+Command Line:
+--------------------------
+  1: ws
+  2: proteinsequences.txt
+--------------------------
+
+  0-arg Constructor - a.size =       0 strings ->  (a) String     1: []
+                                                   (a) String   100: []
+                                                   (a) String  1000: []
+                                                   (a) String  last: []
+                                                   (a) String last+: []
+
+  1-arg Constructor - b.size =   23012 strings ->  (b) String     1: [MGARHLRYGREAGMNKTEIP]
+                                                   (b) String   100: [MSTPAPGPRSGGELLVAQLQ]
+                                                   (b) String  1000: [MPQTLEVIATLLFAVAVLHT]
+                                                   (b) String  last: [MAKVALITGITGQDGAYLAE]
+                                                   (b) String last+: []
+
+  Copy Constructor  - c.size =   23012 strings ->  (c) String     1: [MGARHLRYGREAGMNKTEIP]
+                                                   (c) String   100: [MSTPAPGPRSGGELLVAQLQ]
+                                                   (c) String  1000: [MPQTLEVIATLLFAVAVLHT]
+                                                   (c) String  last: [MAKVALITGITGQDGAYLAE]
+                                                   (c) String last+: []
+
+  Copy Assignment   - a.size =   23012 strings ->  (a) String     1: [MGARHLRYGREAGMNKTEIP]
+                                                   (a) String   100: [MSTPAPGPRSGGELLVAQLQ]
+                                                   (a) String  1000: [MPQTLEVIATLLFAVAVLHT]
+                                                   (a) String  last: [MAKVALITGITGQDGAYLAE]
+                                                   (a) String last+: []
+
+--------------------------
+Execution Times:
+--------------------------
+  0-arg Constructor             300 nanoseconds
+  1-arg Constructor       215180193 nanoseconds
+  Copy Constructor         10006023 nanoseconds
+  Copy Assignment          10304123 nanoseconds
+  Destructor                6507515 nanoseconds
+--------------------------

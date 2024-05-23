@@ -1,0 +1,9 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 23 May 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 2, I reviewed how to read data from a text file using fstream in C++. Meanwhile, I gained hands-on experience using the std::chrono library to calculate the execution time for each function declared and defined in the ProteinDatabase module, including the default constructor, parameterized constructor, copy constructor, copy assignment, move constructor, move assignment, and destructor.
+
+Specifically, the execution times for the move constructor and move assignment are significantly less than those for the copy constructor and copy assignment, respectively. I believe the reason for this is that move operations do not involve any copying or destruction of resources. Instead, a new object is created by transferring ownership of resources from an existing object.
