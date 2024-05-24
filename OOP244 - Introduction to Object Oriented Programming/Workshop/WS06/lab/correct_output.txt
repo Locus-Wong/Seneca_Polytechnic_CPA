@@ -1,0 +1,89 @@
+Script started on Sun 03 Mar 2024 09:20:12 PM EST
+==148602== Memcheck, a memory error detector
+==148602== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==148602== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==148602== Command: ws.exe
+==148602== 
+
+Failed to open file: BadFile.csv
+
+emailFile_test1.csv
+===================
+jeremiah_morris85@office.mobi      Jeremiah Morris          Year = 2019
+jonathan_russell23@website.ae      Jonathan Russell         Year = 2001
+colton_lowe21@wiki.be              Colton Lowe              Year = 2017
+eleanor_jenkins46@site.info        Eleanor Jenkins          Year = 2008
+
+Emails saved to backupEmails.csv
+backupEmails.csv
+================
+jeremiah_morris85@office.mobi      Jeremiah Morris          Year = 2019
+jonathan_russell23@website.ae      Jonathan Russell         Year = 2001
+colton_lowe21@wiki.be              Colton Lowe              Year = 2017
+eleanor_jenkins46@site.info        Eleanor Jenkins          Year = 2008
+
+backupEmails.csv
+================
+jeremiah_morris85@office.mobi      Jeremiah Morris          Year = 2019
+jonathan_russell23@website.ae      Jonathan Russell         Year = 2001
+colton_lowe21@wiki.be              Colton Lowe              Year = 2017
+eleanor_jenkins46@site.info        Eleanor Jenkins          Year = 2008
+
+backupEmails.csv
+================
+jeremiah_morris85@office.mobi      Jeremiah Morris          Year = 2019
+jonathan_russell23@website.ae      Jonathan Russell         Year = 2001
+colton_lowe21@wiki.be              Colton Lowe              Year = 2017
+eleanor_jenkins46@site.info        Eleanor Jenkins          Year = 2008
+
+backupEmails.csv
+================
+jeremiah_morris85@office.mobi      Jeremiah Morris          Year = 2019
+jonathan_russell23@website.ae      Jonathan Russell         Year = 2001
+colton_lowe21@wiki.be              Colton Lowe              Year = 2017
+eleanor_jenkins46@site.info        Eleanor Jenkins          Year = 2008
+mia_peterson70@corporation.jobs    Mia Peterson             Year = 2010
+dylan_diaz90@agency.cn             Dylan Diaz               Year = 2022
+logan_thomas72@project.ca          Logan Thomas             Year = 2016
+sophia_martinez64@resource.uk      Sophia Martinez          Year = 2000
+alyssa_soto29@dev.es               Alyssa Soto              Year = 2005
+olivia_brown2@technology.aero      Olivia Brown             Year = 2009
+isabel_snyder39@webpage.biz        Isabel Snyder            Year = 2013
+isabel_thompson26@directory.au     Isabel Thompson          Year = 2001
+emma_jones19@system.sa             Emma Jones               Year = 2006
+
+copyEmailFile.csv
+=================
+jeremiah_morris85@office.mobi      Jeremiah Morris          Year = 2019
+jonathan_russell23@website.ae      Jonathan Russell         Year = 2001
+colton_lowe21@wiki.be              Colton Lowe              Year = 2017
+eleanor_jenkins46@site.info        Eleanor Jenkins          Year = 2008
+mia_peterson70@corporation.jobs    Mia Peterson             Year = 2010
+dylan_diaz90@agency.cn             Dylan Diaz               Year = 2022
+logan_thomas72@project.ca          Logan Thomas             Year = 2016
+sophia_martinez64@resource.uk      Sophia Martinez          Year = 2000
+alyssa_soto29@dev.es               Alyssa Soto              Year = 2005
+olivia_brown2@technology.aero      Olivia Brown             Year = 2009
+isabel_snyder39@webpage.biz        Isabel Snyder            Year = 2013
+isabel_thompson26@directory.au     Isabel Thompson          Year = 2001
+emma_jones19@system.sa             Emma Jones               Year = 2006
+mia_peterson70@corporation.jobs    Mia Peterson             Year = 2010
+dylan_diaz90@agency.cn             Dylan Diaz               Year = 2022
+logan_thomas72@project.ca          Logan Thomas             Year = 2016
+sophia_martinez64@resource.uk      Sophia Martinez          Year = 2000
+alyssa_soto29@dev.es               Alyssa Soto              Year = 2005
+olivia_brown2@technology.aero      Olivia Brown             Year = 2009
+isabel_snyder39@webpage.biz        Isabel Snyder            Year = 2013
+isabel_thompson26@directory.au     Isabel Thompson          Year = 2001
+emma_jones19@system.sa             Emma Jones               Year = 2006
+
+==148602== 
+==148602== HEAP SUMMARY:
+==148602==     in use at exit: 0 bytes in 0 blocks
+==148602==   total heap usage: 205 allocs, 205 frees, 175,842 bytes allocated
+==148602== 
+==148602== All heap blocks were freed -- no leaks are possible
+==148602== 
+==148602== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Sun 03 Mar 2024 09:20:13 PM EST
