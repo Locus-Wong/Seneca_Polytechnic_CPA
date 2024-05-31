@@ -1,0 +1,19 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 30 May 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 3, it is necessary for me to include <string> library to declare m_title of type string. 
+
+Both class definitions and implementations of the Collection and OrderedCollection modules must be included on in header file because both of them are templates. Templates are not actual code until they are instantiated with specific types. The compiler needs to see both the declaration and implementation in the header file to generate the appropriate code for each type used with the template. If the implementation were in a separate source file, the compiler would not have access to it when it tries to instantiate the template.
+
+Also even though getSmallestItem() and getLargestItem() are returning the smallest item and largest item respectively, we cannot marked them as const member functions. It is because both of them are static member functions, meaning they belong to the class itself, not any specific instance, which makes using const qualifier to indicate the member function do not modify the instance is not appropriate.
+
+The T& operator[]( const unsigned int index) should not be made a query as (*this)[currentSize++] is needed to assign src in the bool operator+=(const T& src);, which means it should not return const T&, and thus the function cannot be const member function as well, otherwise the const qualifier on the member function implies that the function does not modify the object's state, while returning a non-const reference allows the caller to modify the element in m_items, which contradicts the const qualifier. 
+
+Defining static member variables outside the class definition is necessary because static member variables inside the class definition are only declared and do not occupy memory or have a value yet. To define and make sure that the static member variables are initialized exactly once in the entire program, we need to define static member variables outside the class.
+
+It is necessary to use template specializations to initialize the m_smallestItem and m_largestItem for Book and 10, Book and 72. Otherwise, when the collection of type Book gets instantiated, the member variable of class Collection : m_smallestItem and m_largestItem are not initialized properly. For example, in w3_p2.cpp, seneca::Collection<seneca::Book, 10> bcol; will create 10 items of type Book, and seneca::OrderedCollection<seneca::Book> obcol; will have 72 items of type Book as the OrderedCollection class will always have a capacity of 72 items.
+
+
