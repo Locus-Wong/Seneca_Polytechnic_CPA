@@ -1,0 +1,13 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 6 Jun 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 4, the Restaurant and Reservation classes demonstrate a composition relationship. This means the Restaurant class owns and manages the lifecycle of Reservation objects. Specifically, the Restaurant constructor allocates memory to create new Reservation objects by copying the original ones (using new Reservation(*reservations[i])). In the destructor of the Restaurant class, these Reservation objects are explicitly deleted, indicating that the Restaurant class is responsible for their entire lifecycle.
+
+Conversely, the ConfirmationSender and Reservation classes have an aggregation relationship. In this case, the ConfirmationSender class does not own the Reservation objects but merely references them. Consequently, the ConfirmationSender class does not delete the Reservation objects in its destructor, which indicates that it does not own them. Instead, the ConfirmationSender class includes methods (operator+= and operator-=) to add or remove references to Reservation objects. The only thing in the destructor of the ConfirmationSender does is to delete its array of pointers.
+
+The implementation of move and copy functions differs between composition and aggregation. In composition, since the parent object manages the lifecycle of child objects, the Restaurant class must use a for loop to deallocate all the Reservation objects (delete m_reservations[i];) before deleting the array of pointers within both move and copy functions. In contrast, for the ConfirmationSender class, which uses aggregation, it is sufficient to simply delete the array of pointers (delete[] m_reservations;) and handle the move and copy logic within both move and copy functions, without worrying about the lifecycle of the Reservation objects.
+
+Also, in the copy constructor and copy assignment operator, the Restaurant class needs to allocate memory to create new Reservation objects by deep copying the original ones. In contrast, the ConfirmationSender class only needs to copy the references or pointers to the new instance, without creating new Reservation objects.
