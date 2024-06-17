@@ -77,18 +77,7 @@ namespace seneca
 
 	FoodOrder::FoodOrder(const FoodOrder& src)
 	{
-		strcpy(m_custName,src.m_custName);
-		m_price = src.m_price;
-		m_dailySpecial = src.m_dailySpecial;
-		if (src.m_foodDescription)
-		{
-			m_foodDescription = new char[strlen(src.m_foodDescription) + 1];
-			strcpy(m_foodDescription, src.m_foodDescription);
-		}
-		else
-		{
-			m_foodDescription = nullptr;
-		}
+        *this = src;
 	}
 
 	FoodOrder& FoodOrder::operator=(const FoodOrder& src)
