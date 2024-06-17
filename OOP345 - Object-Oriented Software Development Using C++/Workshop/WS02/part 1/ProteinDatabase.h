@@ -23,7 +23,7 @@ namespace seneca
 		ProteinDatabase(const ProteinDatabase& src); // copy constructor
 		ProteinDatabase& operator=(const ProteinDatabase& src); // copy assignment operator
 		size_t size() const; // a query that returns the number of protein sequences stored in the current object.
-		std::string operator[](size_t index);// a query that returns a copy of the protein sequence at the index received as the function parameter.
+		std::string operator[](size_t index) const;// a query that returns a copy of the protein sequence at the index received as the function parameter.
 		~ProteinDatabase();
 	};
 }

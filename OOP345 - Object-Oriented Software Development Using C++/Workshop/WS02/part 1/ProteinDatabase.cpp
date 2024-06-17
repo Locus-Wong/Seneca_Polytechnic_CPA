@@ -31,12 +31,12 @@ namespace seneca
 				m_noOfProteins++;
 			}
 		}
-		file.close();
+        file.clear();
 		readLine = "";
-
 		m_proteinSequences = new string[m_noOfProteins];
-		file.open(filename);
+        file.seekg(std::ios::beg);
 		int i = 0;
+        
 		while (getline(file, readLine))
 		{
 			if (readLine[0] == '>')
@@ -78,7 +78,7 @@ namespace seneca
 		return m_noOfProteins;
 	}
 
-	std::string ProteinDatabase::operator[](size_t index)
+	std::string ProteinDatabase::operator[](size_t index) const
 	{
 		return (m_proteinSequences) ? (index > (m_noOfProteins - 1) ? "" : m_proteinSequences[index]) : ""; // if m_proteinSequences is nullptr, return empty string
 																											// if index is greater than the number of proteins, return empty string
