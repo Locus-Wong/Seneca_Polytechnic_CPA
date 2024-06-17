@@ -31,9 +31,9 @@ namespace seneca
 				m_noOfProteins++;
 			}
 		}
-        file.clear();
+        	file.clear();
 		readLine = "";
-        file.seekg(std::ios::beg);
+        	file.seekg(std::ios::beg);
 		m_proteinSequences = new string[m_noOfProteins];
 		
 		int i = 0;
