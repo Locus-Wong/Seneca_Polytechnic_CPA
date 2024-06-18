@@ -23,12 +23,12 @@ class Collection
 protected:
     T m_items[C]{};
     void setSmallestItem(const T& src){
-        if(src < m_smallestItem){
+        if(src < m_smallestItem){ // call bool Book::operator<(const Book& src) const when T is Book type
             m_smallestItem = src;
         }
     }
     void setLargestItem(const T& src){
-        if(src > m_largestItem){
+        if(src > m_largestItem){ // call bool Book::operator>(const Book& src) const when T is Book type
             m_largestItem = src;
         }
     }

@@ -49,7 +49,7 @@ int main(int argc, char** argv)
     {        // Collection tester for int-type
         seneca::Collection<int, 10> icol;
         for (const auto& i : ints)
-            icol += i;
+            icol += i; // call bool Collection<int, 10>::operator+=(const T& src)
         std::cout << "(smallest,largest) items: (" << icol.getSmallestItem() << "," << icol.getLargestItem() << ")" << std::endl; // call T Collection<int, 10>::getSmallestItem() const
         std::cout << "size/capacity: " << icol.size() << "/" << icol.capacity() << std::endl;
         std::cout << "Contents: ";
@@ -86,7 +86,7 @@ int main(int argc, char** argv)
 
         std::cout << "[After adding Six books to the collection]" << std::endl;
         for(const auto& b : books)
-            bcol += b; // use bool Book::operator>(const Book& src) const and bool Book::operator<(const Book& src) const
+            bcol += b; // call bool Collection<seneca::Book, 10>::operator+=(const T& src)
         std::cout << "Book with smallest pages-to-chapters ratio: " << std::endl;
         bcol.getSmallestItem().print(std::cout) << std::endl; // call ostream& Book::print(ostream& os) const
         std::cout << "Book with largest pages-to-chapters ratio: " << std::endl;
@@ -103,7 +103,7 @@ int main(int argc, char** argv)
     {        // Collection tester for int-type
         seneca::OrderedCollection<int> oicol;
         for(const auto& i : ints)
-            oicol += i;
+            oicol += i; // call bool OrderedCollection<int>::operator+=(const T& src)
         std::cout << "(smallest,largest) items: (" << oicol.getSmallestItem() << "," << oicol.getLargestItem() << ")" << std::endl;
         std::cout << "size/capacity: " << oicol.size() << "/" << oicol.capacity() << std::endl;
         std::cout << "Contents: ";
@@ -116,7 +116,7 @@ int main(int argc, char** argv)
     {// Collection tester for double-type
         seneca::OrderedCollection<double> odcol;
         for(const auto& d : doubles)
-            odcol += d;
+            odcol += d; // call bool OrderedCollection<double>::operator+=(const T& src)
         std::cout << "(smallest,largest) items: (" << odcol.getSmallestItem() << "," << odcol.getLargestItem() << ")" << std::endl;
         std::cout << "size/capacity: " << odcol.size() << "/" << odcol.capacity() << std::endl;
         std::cout << "Contents: ";
@@ -138,7 +138,7 @@ int main(int argc, char** argv)
 
         std::cout << "[After adding six books to the collection]" << std::endl;
         for(const auto& b : books)
-            obcol += b;
+            obcol += b; // call bool OrderedCollection<seneca::Book>::operator+=(const T& src)
         std::cout << "Book with smallest pages-to-chapters ratio: " << std::endl;
         obcol.getSmallestItem().print(std::cout) << std::endl; // call ostream& Book::print(ostream& os)
         std::cout << "Book with largest pages-to-chapters ratio: " << std::endl;
