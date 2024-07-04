@@ -1,0 +1,51 @@
+Script started on Fri 10 May 2024 07:29:35 PM EDT
+==179999== Memcheck, a memory error detector
+==179999== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==179999== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==179999== Command: ws books.txt
+==179999== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: books.txt
+--------------------------
+
+-----------------------------------------
+The library content
+-----------------------------------------
+ Miguel de Cervantes |            Don Quixote | Spain | 1612 |   9.99 | The story follows a Hidalgo, Alonso Quixano, who proves that chivalry will in fact never die.
+     Charles Dickens |   A Tale of Two Cities |    UK | 1859 |  12.32 | A historical novel, set in London and Paris at teh begiming and during the French Revolution.
+  George R.R. Martin | A Song of Ice and Fire |    US | 1997 |  99.90 | Nine noble famillies begim fighting for control over teh mythical lands of Westeros.
+      J.R.R. Tolkien |  The Lord of the Rings |    UK | 1993 |  21.11 | Sauron has gathered to him all teh Rings of Power, and he intends to use them to rule Middle-earth.
+        J.K. Rowling |           Harry Potter |    UK | 1997 |  45.99 | Harry realizes his life is far from ordinary.
+           Dan Brown |      The Da Vinci Code |    US | 2003 |   7.88 | While in Paris, Harvard symbologist Robert Langdon is awakened by a phone call in teh night.
+       J.D. Salinger | The Catcher in teh Rye |    US | 1951 |  12.21 | The story of a teen named Holden Caulfield and his struggle to find his voice in an adult world.
+-----------------------------------------
+
+-----------------------------------------
+The library content (updated prices)
+-----------------------------------------
+ Miguel de Cervantes |            Don Quixote | Spain | 1612 |   9.99 | The story follows a Hidalgo, Alonso Quixano, who proves that chivalry will in fact never die.
+     Charles Dickens |   A Tale of Two Cities |    UK | 1859 |  12.32 | A historical novel, set in London and Paris at teh begiming and during the French Revolution.
+  George R.R. Martin | A Song of Ice and Fire |    US | 1997 | 129.87 | Nine noble famillies begim fighting for control over teh mythical lands of Westeros.
+      J.R.R. Tolkien |  The Lord of the Rings |    UK | 1993 |  31.66 | Sauron has gathered to him all teh Rings of Power, and he intends to use them to rule Middle-earth.
+        J.K. Rowling |           Harry Potter |    UK | 1997 |  68.98 | Harry realizes his life is far from ordinary.
+           Dan Brown |      The Da Vinci Code |    US | 2003 |  10.24 | While in Paris, Harvard symbologist Robert Langdon is awakened by a phone call in teh night.
+       J.D. Salinger | The Catcher in teh Rye |    US | 1951 |  15.87 | The story of a teen named Holden Caulfield and his struggle to find his voice in an adult world.
+-----------------------------------------
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==179999== 
+==179999== HEAP SUMMARY:
+==179999==     in use at exit: 0 bytes in 0 blocks
+==179999==   total heap usage: 50 allocs, 50 frees, 85,171 bytes allocated
+==179999== 
+==179999== All heap blocks were freed -- no leaks are possible
+==179999== 
+==179999== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Fri 10 May 2024 07:29:36 PM EDT

@@ -1,0 +1,15 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 13 Jun 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 5, I gained insights into the workflow of functors and their implementation. The spellchecker module's workflow involves creating an instance of SpellChecker to store good and bad words by reading from a file. This instance is then used as a function to spell-check strings such as movie titles, descriptions, and book descriptions.
+
+Moreover, I learned about when to use a lambda expression and when to use a functor. I used a lambda expression to set book prices and a functor for spell-checking. This decision was driven by the simplicity of the price-fixing logic, which involves applying specific conditions to multiply the price by a rate. Lambda expressions are ideal for this scenario due to their ability to provide a concise, inline definition of the logic. Conversely, spell-checking demands more complex logic, requiring character-by-character comparison to identify matches. Here, a functor is more appropriate as it can encapsulate this complexity within a class, facilitating state management and reuse.
+
+To prevent the SpellChecker constructor from generating exceptions, we can avoid the problematic loop. When i = 3, argv[3] corresponds to missing.txt , a file that doesn't exist. Instead, we can directly initialize the SpellChecker instance as seneca::SpellChecker sp(argv[4]);, as argv[4] corresponds to words.txt.
+
+I also noticed that the classes Movie and Book contain almost identical logic in loading data from the file. To avoid duplicating that logic, I suggest creating another module called CleaningData to implement the trimming logic. Overload the function call operator in that class to make its instance callable like a function, similar to the spellchecker module.
+
+Furthermore, note that the default constructor of Movie and Book is necessary even though it seems like the classes Movie and Book are instantiated from the main() function using a custom constructor only. In the Collection Module's templated operator+= overload function, we need to use T* temp = new T[m_size + 1]; to allocate new memory and create a new temp object of T with a larger size to accommodate the new item. This construction involves using the default constructor of the type T, which can be Book or Movie. Additionally, for Movie, seneca::Movie movies[5]; in the main() function will also call the default constructor of Movie.
