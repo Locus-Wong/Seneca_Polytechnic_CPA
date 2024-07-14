@@ -1,0 +1,13 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 09 July 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 6, I learned the importance of explicitly deallocating each element in the std::vector<seneca::Resource*> to prevent memory leaks. This experience highlighted the necessity of creating a destructor for the Filesystem module to manage resource cleanup effectively. Additionally, I discovered the importance of deallocating the root directory using delete m_root if a file cannot be opened. These steps are crucial for maintaining robust and memory-efficient applications.
+
+
+Another important lesson was the use of dynamic_cast to call specific functions for Directory objects stored in a Resource*. I learned that dynamic_cast allows for type casting from a base class pointer (Resource*) to a derived class pointer (Directory*). This is necessary because a base class pointer can only access the base class's members and methods, not those specific to the derived class. For instance, in the find() member function of Directory, I had to call it recursively to check if a new resource already exists in the current directory. This required type casting from Resource* to Directory* and using the arrow operator to call the function if the recursive flag was set: Resource* found = dynamic_cast<Directory*>(el)->find(name, flags);
+
+
+Furthermore, this workshop reinforced the necessity of using std::vector<seneca::Resource*> to enable polymorphism. By using pointers, we can call derived class-specific functions through type casting. If we used objects directly (std::vector<seneca::Resource>), we would not be able to cast and call derived class-specific functions, as all objects in the vector would be of type Resource, not the actual derived type. On the contrary, as Resource is a virtual interface, the overriding functions defined in different derived classes (Directory and File) can always be called correctly based on the type of the pointer.

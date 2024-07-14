@@ -1,0 +1,33 @@
+Command Line:
+--------------------------
+  1: ws
+--------------------------
+
+--------------------------
+   DIRECTORY STRUCTURE
+--------------------------
+**EXPECTED EXCEPTION: flag.jpg image already exists in the root
+
+Directory structure created successfully
+--------------------------
+--------------------------
+      RESOURCE INFO
+--------------------------
+3   121 bytes /
+     42 bytes /scene.jpg
+     16 bytes /flag.jpg
+1    63 bytes /videos/
+     63 bytes /videos/harry-potter.webm
+--------------------------
+--------------------------
+           FIND
+--------------------------
+**EXPECTED ERROR: File .flag.jpg not found in /
+
+Found flag.jpg in / with the ALL flag
+
+**EXPECTED ERROR: File harry-potter.webm not found in / non-recursively
+
+Found harry-potter.webm in / recursively
+
+--------------------------
