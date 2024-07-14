@@ -1,0 +1,21 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 13 Jul 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 7, I explored several STL algorithms to enhance the handling of BakedGood objects. Using std::sort, std::for_each, std::accumulate, std::find_if, and std::copy_if, I streamlined operations and improved efficiency over manual loops.
+
+std::sort was great for organizing our bakery inventory in ascending order based on input fields. It kept our inventory consistent and easy to manage.
+
+std::for_each made printing each BakedGood object to the console straightforward, eliminating the need for explicit loops and keeping the code clean.
+
+For calculating total stock and price, std::accumulate was ideal. It allowed me to sum values efficiently, maintaining accuracy with minimal code.
+
+std::find_if helped locate the first BakedGood object matching user criteria, ensuring we could quickly check stock availability.
+
+Similarly, std::copy_if enabled selective copying of items, useful for generating lists of out-of-stock goods and managing inventory.
+
+When it came to sorting, there was a distinction between using std::sort for vectors and std::list::sort for lists. std::sort is designed for random access iterators like those in vectors, making it faster for large collections. On the other hand, std::list::sort works better with bidirectional iterators, making it efficient for lists, especially with frequent insertions and deletions.
+
+Overall, these STL algorithms simplified our code and boosted readability and performance, ensuring our bakery management system ran smoothly.
