@@ -1,0 +1,21 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 28 Jul 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 9, I discovered that using binary files made reading and writing data much more efficient compared to using delimiters. Binary files store data in a format that directly matches the memory layout of my data structures, which made handling large datasets—like the 500,000 items we worked with—smoother and faster. It felt like I had complete control over how the data was organized and accessed, which was a huge plus.
+
+Binding functions to arguments turned out to be a really handy technique. It allowed me to set some parameters in advance and then pass the function to a thread with those parameters already fixed. This approach made working with threads much cleaner and less error-prone. It was great to see how this method simplified things and kept my code organized.
+
+Using multiple threads was another big takeaway. Breaking tasks into smaller sub-tasks and running them simultaneously across multiple processor cores really improved performance. Instead of executing tasks one by one, I could process them in parallel, which made everything run much faster. It was impressive to see how effectively modern processors handle parallel tasks and how much of a difference it made to the overall performance of my application.
+
+Finally, I observed an interesting behavior when I inserted the following statement inside the for loop in both the computeAvgFactor and computeVarFactor functions:
+
+std::this_thread::sleep_for(std::chrono::nanoseconds(1)); // or
+std::this_thread::sleep_for(std::chrono::nanoseconds(10)); // or
+std::this_thread::sleep_for(std::chrono::nanoseconds(50));
+
+Surprisingly, the computation times with a sleep value of 50 nanoseconds were much faster than the others. I think this is because very short sleep durations (like 1 or 10 nanoseconds) really interrupted the CPU processing, reducing the effectiveness of CPU caching and pipelining. The longer sleep duration, on the other hand, allowed the CPU to spend more continuous time executing the thread's code rather than constantly switching contexts.
+
+Overall, these insights from the workshop were incredibly valuable and helped me understand the importance of efficient data handling, function binding, and multi-threading in optimizing application performance.
