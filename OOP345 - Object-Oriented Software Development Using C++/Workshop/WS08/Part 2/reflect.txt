@@ -1,0 +1,13 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 20 Jul 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In Workshop 8, we learned why using a unique_ptr wouldn't be the best choice for our Database class. A unique_ptr enforces unique ownership, meaning the object it points to can't be shared. Since we need just one instance of Database that can be accessed from different parts of our program, a shared_ptr is perfect because it lets multiple parts of the program share ownership of that single instance.
+
+In part 2, transforming the Database module into a templated class was an interesting challenge. I had to adjust the class to use a template type and apply that type to the class name, constructor, and destructor. I also provided specializations for different types (std::string and long long) for the encryptDecrypt method and the private constructor to make sure everything worked smoothly with w8_p2.cpp.
+
+One crucial thing I learned is the importance of explicitly deleting the copy constructor and copy assignment operator. Although the private constructor stops new instances from being created outside the class, it doesn't prevent copying of an existing instance. If we don't explicitly delete these operations, the compiler will generate default implementations, which could lead to unintended copying of our Singleton instance. By explicitly deleting them, we ensure our Singleton pattern works as intended.
+
+Lastly, I noticed that the custom destructor is called twice, even though we implemented the Singleton pattern. This happens because we have template specializations (std::string and long long) for the private constructor, and each specialization results in a different type. So, we end up with separate instances, each with its own destructor being called.
