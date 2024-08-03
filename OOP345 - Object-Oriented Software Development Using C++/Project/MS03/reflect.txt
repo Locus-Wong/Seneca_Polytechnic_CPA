@@ -1,0 +1,71 @@
+//Name: Tsz Wa Wong
+//Email: twwong9@myseneca.ca
+//Student ID: 152181228
+//Date: 03 Aug 2024
+//I have done all the coding by myself and only copied the code that my professor provided to complete my project.
+
+In this project, the LineManager constructor required a deep dive into STL algorithms to achieve full marks, while traditional for loops were used to iterate through file records. To make sure my logic for finding and storing current and next stations was spot-on, I started with a for loop using an iterator:
+
+for (auto it = stations.begin(); it != stations.end(); ++it)
+{
+    std::string stationName = (*it)->getItemName(); // Get the name of the current station
+
+    if (stationName == workstationName)
+    {
+        currentStation = *it; // Store the current station
+    }
+    if (stationName == nextWorkstationName)
+    {
+        nextStation = *it; // Store the next station
+    }
+}
+
+Later, I enhanced the solution by including the <algorithm> header and leveraging std::for_each with a lambda function. Here, workstationName and nextWorkstationName are captured by value to prevent accidental modification, while currentStation and nextStation are captured by reference so they can be updated:
+
+std::for_each(stations.begin(), stations.end(), [workstationName, nextWorkstationName, &currentStation, &nextStation](Workstation* ws) {
+    if (ws->getItemName() == workstationName) {
+        currentStation = ws;
+    }
+    if (ws->getItemName() == nextWorkstationName) {
+        nextStation = ws;
+    }
+});
+
+For identifying the first station, I employed std::for_each and std::none_of algorithms with two lambda functions. The outer lambda captures this to allow the inner lambda to access the m_activeLine variable and iterate through the current assembly line. The outer lambda also captures station by value, enabling it to be used in the inner lambda to check if it is the nextStation of any other workstation. The std::none_of algorithm is utilized to determine if station is the first station in the line by verifying if no other workstation in m_activeLine has station as its nextStation. If no other workstation has station as its nextStation, std::none_of returns true, indicating that station is the first station:
+
+Here's how the old nested for loops approach looked:
+for (auto& station : m_activeLine)
+{
+    bool isFirstStation = true;
+    for (auto& otherStation : m_activeLine)
+    {
+        if (otherStation->getNextStation() == station)
+        {
+            isFirstStation = false; // If the current station is the next station of another station, it is not the first station
+            break; // Check the next station
+        }
+    }
+    if (isFirstStation)
+    {
+        m_firstStation = station;
+        break; // If the current station is the first station, exit the loop
+    }
+}
+
+And here's the streamlined STL version:
+std::for_each(m_activeLine.begin(), m_activeLine.end(), [this](Workstation* station) {
+    bool isFirstStation = std::none_of(m_activeLine.begin(), m_activeLine.end(), [station](Workstation* otherStation) {
+        return otherStation->getNextStation() == station;
+    });
+    if (isFirstStation) {
+        m_firstStation = station;
+    }
+});
+
+In the run function of the LineManager module, the first pending order is moved to the first station’s m_orders using *m_firstStation += std::move(g_pending.front());, while std::move is used to ensure no customer order copying occurs. This prevents an exception from being thrown by the CustomerOrder copy constructor, as the copy constructor is explicitly designed to throw an exception:
+CustomerOrder::CustomerOrder(const CustomerOrder& src)
+{
+    throw "Error"; // The copy constructor should throw an exception if called
+}
+
+Lastly, considering that m_widthField should not be negative, it is of type size_t. However, since std::setw accepts only an int, I used static_cast<int>(m_widthField) to ensure proper type conversion.
