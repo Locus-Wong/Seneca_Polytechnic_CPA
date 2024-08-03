@@ -64,16 +64,16 @@ namespace seneca
 		if (full)
 		{
 			os << std::setfill('0') << std::right << std::setw(3) << m_stationId << " | " 
-				<< std::setfill(' ') << std::left << std::setw(m_widthField) << m_stationName 
-				<< " | " << std::setfill('0') << std::right << std::setw(6) << m_serialNumber 
+				<< std::setfill(' ') << std::left << std::setw(static_cast<int>(m_widthField)) << m_stationName
+				<< " | " << std::setfill('0') << std::right << std::setw(6) << m_serialNumber
 				<< " | " << std::setfill(' ') <<  std::right << std::setw(4) << m_qty << " | " 
 				<< std::left << m_stationDesc << std::endl;
 		}
 		else
 		{
 			os << std::setfill('0') << std::right << std::setw(3) << m_stationId << " | " 
-				<< std::setfill(' ')  << std::left << std::setw(m_widthField) << m_stationName 
-				<< " | " << std::setfill('0') << std::right << std::setw(6) << m_serialNumber 
+				<< std::setfill(' ')  << std::left << std::setw(static_cast<int>(m_widthField)) << m_stationName
+				<< " | " << std::setfill('0') << std::right << std::setw(6) << m_serialNumber
 				<< " | " << std::endl;
 		}
 	}
