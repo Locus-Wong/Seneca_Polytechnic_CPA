@@ -1,0 +1,45 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #7
+Full Name  :TSZ WA WONG 
+Student ID#:152181228 
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. I was successful in coding non-repetitive sections of logic in the gameplay portion of this workshop. To accomplish this, I used a total of four for-loops, and each for-loop is used to display only one line. For line 1, I used an if-else statement inside a for-loop to display the player symbol only if the current index is equal to (nextMove - 1); otherwise, it will output a whitespace. For line 2, I used a nested if-else statement inside a for-loop. First, I used an if-else statement to locate all the history positions, and for each history position, I used another if-else statement to check if the location has a hidden bomb or treasure, or both, and display the corresponding special character. For lines 3 and 4, I also used an if-else statement inside a for-loop to check if the current index is divisible by 10. If it is, I will print the tens of the index in line 3, and 0 in line 4. Every time I display a 0 in line 4, I will deduct the index by 10, so that the display number will count from 1 to 9.
+
+
+2. Without the use of structures, it is difficult for me to organize complex data sets with different data types such as integers, floating-point numbers into logical and meaningful units that can be easily manipulated. For example, even though I know that numOfLives, playerSymbol, numOfTreasure and historyPositions are all related to PlayerInfo, while max_Num_Move, pathLength, bombPositions and treasurePositions are all related to GameInfo, I could not define a group of these variables as a single object (derived type), which is PlayerInfo or GameInfo. Also, since structures facilitate the creation of custom data types that can be tailored to specific programming needs, if I want to declare and store a new player and game configuration settings for player2, I can just use two lines of command to achieve this by using 'struct' keyword, without the need to declare those variables one by one. Therefore, structures make code more modular and reusable.
+
+3. The maximum number of levels of nesting is three in my program logic.
+
+while (player.numOfLives > 0 && game.max_Num_Move > 0)
+{
+	 if(player.historyPositions[nextMove-1] == 1)
+	{
+	}
+	else
+	{
+		if (game.bombPositions[nextMove-1] == 1 && game.treasurePositions[nextMove-1] == 1)
+		{
+		}
+		else if (game.bombPositions[nextMove-1] == 0 && game.treasurePositions[nextMove-1] == 1)
+		{
+		}
+		else if (game.bombPositions[nextMove-1] == 1 && game.treasurePositions[nextMove-1] == 0)
+            	{
+			if (player.numOfLives == 0)
+                	{
+			}
+		}
+		else
+		{
+		}
+	}
+
+}
+

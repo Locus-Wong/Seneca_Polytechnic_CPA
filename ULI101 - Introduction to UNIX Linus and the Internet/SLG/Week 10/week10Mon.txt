@@ -1,0 +1,45 @@
+WEEK 10 - REGULAR EXPRESSIONS
+
+regular expression - a sequence of characters (literals or special
+characters) that define a search pattern.
+
+
+Filename expansions
+
+? -> indicates a single character
+[][! ] -> a sequence of characters
+* -> represents zero or more characters
+
+
+Special characters used in complex regex(regular expressions)
+^ -> indicates the beginning of a line
+$ -> indicates the end of a line
+. -> indicates any single character
+[][^] -> a sequence of characters
+* -> zero or more occurrences of previous character
+	-> a* -> a, aa, aaa
+	
+what is the difference between *a and a*?
+
+Extended regular expressions -> only allowed with egrep
+egrep -> alias for grep -E
+{min, max} -> minimum and maximum number of repetitions of the
+	previous character
+{num} -> num number of repetition of the previous character
+{, num} -> up to num number of repetitions of the previous character
+{num, } -> the minimum number of repetitions of the previous character
+
++ -> 1 or more occurrences of the previous character
+? -> zero or 1 occurrence of the previous character
+() -> groups, groups of characters, a word, a phrase
+| -> or operator
+
+
+Recap on grep options
+-i -> ignores case
+-v -> inverts the search/match
+-w -> exact word
+-x -> exact line
+-c -> count number of lines that match the pattern
+-r -> recursive, when you search through directories
+-l -> only displays the file name

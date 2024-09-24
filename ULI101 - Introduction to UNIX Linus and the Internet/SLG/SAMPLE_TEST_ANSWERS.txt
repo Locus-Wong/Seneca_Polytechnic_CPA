@@ -1,0 +1,103 @@
+PART 1 - answer
+
+1. a
+2. d
+3. c
+4. b
+5. e
+6. c
+7. e
+8. d
+9. a
+10. c
+
+PART 2 - answer
+1. "^[A-Z]{2,}\s{3}(this ){1,2}"
+2. "a{2,5}.*x?.*([0-9]|bye)$"
+3. sed 's/|/::/g; 20q; 6,8d' cars.txt
+        OR      sed -n 's/|/::/g; 1,5p; 9,20p' cars.txt
+4. sed -n '/[0-6][0-9][0-9][0-9][0-9]$/ p' cars.txt
+        OR      sed '/[7-9][0-9][0-9][0-9][0-9]$/ d' cars.txt
+5. awk '{total=$4+$5} {print "Employee", $2, $3, "has the total compensation of $" total}' employees.txt6. 
+6. awk -F'|' '$NF > 35000 {print "Model: " $2 "\nMake: " $1 "\nYear: " $3 "\nPrice: " $NF}' cars.txt
+7. awk 'BEGIN {print "****PROCESSING****"} {total+=$4;bonus+=$5} END {print "TOTAL SALARY: " total "\nTOTAL BONUS: " bonus "\n****COMPLETED****"}' employees.txt
+8. awk 'max < $4 {max=$4; fname=$2; lname=$3; total=$4+$5} END {print "Employee", fname, lname, "makes the highest salary of $" total}' employees.txt
+
+PART 3 - answer
+
+
+
+grades.bash
+
+#!/bin/bash
+sum=0
+for i in {1..5}
+do
+read -p "Enter grade for subject #$i: " num
+sum=$(($sum + $num))
+done
+
+let average=$sum/$i
+echo Your total grade is $sum
+echo Your average is $average
+
+
+
+numbers.bash
+
+#!/bin/bash
+
+valid=false
+
+clear
+while [[ "$valid" = false ]]
+do
+        read -p "Type in a number less than 10: " num
+
+if [ $(echo $num | grep "[^0-9]") ]
+then
+        echo "Incorrect data input!"
+elif [[ num -lt 1 || num -gt 9 ]]
+then
+        echo "Number must be between 1 and 9!"
+else
+        echo "You entered $num"
+        valid=true
+fi
+done
+
+for ((i=$num;i>0;i--))
+do
+        for ((j=1; j<=i; j++))
+        do
+                echo -n "$i"
+        done
+        echo
+done
+
+for ((i=2;i<=$num;i++))
+do
+        for ((j=1; j<=i; j++))
+        do
+                echo -n "$i"
+        done
+        echo
+done
+
+
+
+
+palindrome.bash
+
+#!/bin/bash
+
+read -p "Enter a word: " word
+
+nw=$(echo $word | tr [A-Z] [a-z] | tr -d ' ')
+bw=$(echo $nw | rev)
+if [ $nw == $bw ]
+then
+echo $word is a Palindrome
+else
+echo $word is not a Palindrome
+fi

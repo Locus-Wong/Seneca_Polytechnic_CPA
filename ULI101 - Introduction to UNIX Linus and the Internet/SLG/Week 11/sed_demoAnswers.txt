@@ -1,0 +1,17 @@
+SED demonstration answers
+1.	Get all honda cars 
+	a.	sed -n ‘/honda/ p’ cars.txt
+2.	get all cars that are not chevy/Chevy
+	a.	sed ‘/[cC]hevy/ d’ cars.txt
+3.	get all cars that are from the 80’s
+	a.	sed -En '/[a-z]\s+8[0-9]\s/ p' cars.txt
+4.	get all cars that are not from the 80s
+	a.	sed -E ‘/[a-z]\s+8[0-9]\s/ d’ cars.txt
+5.	quit on line number 4
+	a.	sed ‘4 q’ cars.txt
+6.	quit on the first match for ford
+	a.	sed ‘/ford/ q’ cars.txt
+7.	replace all 65 with 75
+	a.	sed ‘s/65/75/g’ cars.txt
+8.	replace all 0 with ‘.’
+	a.	sed ‘s/0/./g’ cars.txt

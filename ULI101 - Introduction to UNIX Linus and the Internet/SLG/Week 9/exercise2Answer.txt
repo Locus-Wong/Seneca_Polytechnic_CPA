@@ -1,0 +1,12 @@
+PROCESS EXERCIES ANSWERS
+1. vim
+2. sleep 800
+3. fg
+4. bg %4
+5. fg %3
+6. bg %4
+7. sleep 1000 &
+8. sleep 500 then ctrl + z
+9. kill 75715
+10. kill %1
+11. kill -9 %3
