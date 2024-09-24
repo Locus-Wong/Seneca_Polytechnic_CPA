@@ -1,0 +1,18 @@
+LINKE EXERCISE ANSWERS
+
+1. mkdir week9-link; cd week9-link
+2. touch original-file
+3. nano original-file
+4. cp original-file original-copy
+5. ln original-file hard-link1
+6. ln hard-link1 hard-link2
+7. ln -s original-file soft-link1
+8. ln -s soft-link1 soft-link2
+9. ls -li
+10. nano hard-link1
+11. hard links and original-file share same time stamp, same inode
+	whereas soft-links and original-copy have time stamps and inodes irrelevent
+	to the original-file
+12. original-copy
+13. rm original-file
+14. soft-link1 and soft-link2 now have broken links

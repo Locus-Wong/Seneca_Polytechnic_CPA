@@ -1,0 +1,214 @@
+Once you have successfully built the directory structure, answer the following questions.
+** do not change your current directory unless instructed otherwise **
+
+	mkdir -p midtermReview/{aps145,com101,cpr101,ipc144,uli101} midtermReview/ipc144/{notes,quiz,
+	topic,workshop} midtermReview/uli101/{investigation,notes,test,tutorial}
+
+
+~ -> home directory
+/ -> root directory
+/home/userid is your home directory
+. -> current directory
+.. -> parent directory
+
+1.	Change your current directory to test using relative-to-home pathname.
+	
+	cd ~/midtermReview/uli101/test
+	
+2.	Change your current directory to ipc144 using absolute pathname.
+
+	cd /home/userid/midtermReview/ipc144
+
+3.	Change your current directory to workshop using relative-to-home pathname.
+
+	cd ~/midtermReview/ipc144/workshop
+
+4.	Change your current directory to tutorial using relative pathname.
+
+	cd ../../uli101/tutorial
+
+5.	In your current directory, create files called week1.txt week2.txt week3.txt week4.txt and week5.txt
+	
+	touch week{1..5}.txt
+	touch week1.txt week2.txt week3.txt week4.txt week5.txt
+	
+6.	Copy week1.txt and week3.txt from your current directory to workshop directory using 
+	relative pathname.
+	
+	cp week[13].txt ../../ipc144/workshop
+	cp week{1,3].txt ../../ipc144/workshop
+	cp week1.txt week3.txt ../../ipc144/workshop
+	
+7.	Create a directory called assignment inside com101 directory, presentation inside aps145 
+	directory, and notes inside cpr101 directory in one line of command, using absolute pathname.
+	
+	mkdir /home/userid/midtermReview/com101/assignment /home/userid/midtermReview/aps145/presentation
+	/home/userid/midtermReview/cpr101/notes
+	
+8.	Move ALL files inside the current directory (tutorial) to topic directory using relative 
+	pathname.
+	
+	mv * ../../ipc144/topic
+	
+9.	Using chmod symbolic method, give full permission to the user, read only for groups and 
+	others on a file week1.txt (inside topic directory) using relative-to-home pathname.
+	
+	chmod u=rwx,go=r ~/midtermReview/ipc144/topic/week1.txt
+	chmod u+rwx,go+r-wx ~/midtermReview ipc144/topic/week1.txt
+	
+10.	Using chmod symbolic method, add execute permission to the user, remove read from and add
+	write to the group members, and remove execute from others for file  week2.txt inside topic 
+	directory. Use absolute pathname.
+	
+	chmod u+x,g-r+w,o-x /home/userid/midtermReview/ipc144/topic/week2.txt
+	
+11.	Using chmod octal (absolute) method, provide read, write and execute permission for user,
+	read only for groups, and write and execute for others for file week3.txt inside topic 
+	directory using relative pathname.
+	
+	chmod 743 ../../ipc144/topic/week3.txt
+	octal is in base 8, range 0 ~ 7, uses 3 binary bits
+		2^2	2^1	2^0
+		4	2	1
+		r	w	x
+	
+************************************************************************
+
+chmod vs umask
+chmod is a command used to change the permission values of an existing file/directory
+chmod octal values, 777 means
+user has full permission
+group members have full permission
+others have full permission
+
+
+umask is used to set the default permission values of a newly created files/directories
+umask 000
+777 vs 666
+user, groups, others all have full permission
+
+dir1
+drwxrwxrwx
+file1
+-rw-rw-rw-
+
+077
+022
+
+
+
+read	write	execute
+4		2		1
+
+
+umask 777 = no permission at all, 
+	
+	
+	
+	
+12.	Using chmod octal (absolute) method, give read permission for user, write permission for 
+	groups and execute for others on a file week4.txt inside topic directory. You can use any 
+	path name.
+	
+	chmod 421 ~/midtermReview/ipc144/topic/week4.txt
+	
+13.	Change your current directory to test.
+
+	cd ../test
+
+14.	Copy a directory called sampleDir and its contents from ysseo’s home directory to your current 
+	directory. 
+	
+	cp -r ~ysseo/sampleDir .
+	
+15.	Copy a directory called sampleDir2 and its contents from ysseo’s home directory to your current 
+	directory.
+	
+	cp -r ~ysseo/sampleDir2 .
+	
+16.	Change your current directory to sampleDir2.
+
+	cd sampleDir2
+
+17.	Using ls command, display only the files with jpeg extension.
+
+	ls *.jpeg
+	
+18.	Using ls command, display only pdf files with one digit.
+
+	ls [0-9].pdf
+
+19.	Using ls command, display only the files that start with a, followed by a non-alphabet, non-digit 
+	character and ends with c.
+	a.c a-c a^c
+	a9c, aBc, adc
+	
+	ls a[!a-zA-Z0-9]c
+	
+20.	Using ls command, display only the files that have at least 4 characters, excluding the extension.
+
+	ls ????*.*
+ 
+21.	Change your current directory to sampleDir, and familiarize with the contents in each file.
+
+	cd ../sampleDir
+
+22.	Display all lines that contain word Strawberry from a file called inventory, sort the output in 
+	reverse numerical order and translated into all upper case.
+	
+	grep -w "Strawberry" inventory | sort -rn | tr [a-z] [A-Z]
+	
+23.	display the contacts (phone number and email address) of all the people from Ontario from a file 
+	people.csv. Hint: phone number is the third filed and email is the fourth field of each record(line).
+	
+	grep -w "ON" people.csv | cut -d"," -f3,4
+	
+24.	Display to the screen only the fourth, fifth, and sixth lines from people.csv, but only their names 
+	(first and second fields correspond to name), sorted in alphabetical order, and redirect the output 
+	to a file called names.txt
+	
+	head -6 people.csv | tail -3 | cut -d"," -f1,2 | sort | tee names.txt
+	Cooley, Carla 0.
+	Rodgers, Dustin U.
+	Sutton, Ethan E.
+
+25. 	Display the count of the number of people live in different Canada provinces from people.csv and 
+	only output a single copy of repeated provinces, sorted in numericall order, 
+
+
+	grep -w "ON" people.csv
+	Sutton, Ethan E., (622) 811-0133, mi@sedsemegestas.ca, Berkeley, 53160, ON
+	Cooley, Carla 0., (507) 139-9509, amet.orci.Ut@risus.com, Wheeling, 30493, ON
+	Hart, Damian V., (753) 475-7917, gravida@Nunc.org, Miami Gardens, M2B 2YO, ON 
+	Clarke, Ciaran S., (392) 372-6354,mus@ridiculusmus.org, Cicero, 24297, ON
+	Adkins, Susan D., (456) 242-5390, tempus .non. lacinia@estmollis.ca,Littleton, I80 203, ON
+	Irwin, Melodie D., (765) 226-6519, lobortis.risus@leoelementumsem.org, Westfield, E9L 106, ON
+	Booker, Jackson I., (353) 714-6017, lectus@euodio.ca,Westfield, C5V 9N9, ON 
+	Hurley, Jael N., (658) 318-7694, eu. augue@ornareelitelit.com, Utica, 72596, ON 
+
+	cut -d',' -f7 people.csv | sort | uniq -cd | sort -n
+
+2 AK
+2 BC
+2 CO
+2 DC
+2 IN
+2 MO
+2 MS
+2 NM
+2 QC
+2 WA
+2 WY
+3 ME
+3 NU
+3 NV
+3 PE
+3 SK
+4 AB
+4 IA
+4 NB
+4 YT
+6 NT
+7 NL
+8 MB
+8 ON

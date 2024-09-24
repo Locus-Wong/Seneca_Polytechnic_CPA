@@ -1,0 +1,23 @@
+PRACTICE PROBLEMS ON SED UTILITY - ANSWERS
+1.	Print the entire file with 5th line changed to “this is fifth line”
+	a.	sed ‘5c this is fifth line’
+2.	print from fourth to seventh lines
+	a.	sed -n ‘4,7 p’
+3.	Print all lines of a file except the last line, assuming you do not know how many lines the file has
+	a.	sed ‘$d’
+4.	print the first 6 lines
+	a.	sed ‘6q’
+5.	print only the last line of a file
+	a.	sed ‘$!d’
+6.	print all lines except first 4 lines
+	a.	sed ‘1,4d’
+7.	print all lines that contain “linux”
+	a.	sed -n ‘/linux/ p’
+8.	print all lines, inserting “ULI101” before line 3
+	a.	sed ‘3i ULI101’
+9.	print all lines, appending “WEEK11” after line 5 and 6
+	a.	sed ‘5,6a WEEK11’
+10.	print a file changing all “ford” to “GM”
+	a.	sed ‘s/ford/GM/g’
+11.	print lines from 1-4, and 7-10
+	a.	sed -n ‘1,4p;7,10p’

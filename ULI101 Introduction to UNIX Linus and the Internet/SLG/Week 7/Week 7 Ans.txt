@@ -1,0 +1,91 @@
+1.	Issue a command to display last 3 lines of a file called review.txt and 
+	sort the output in alphabetical order.
+	
+	tail -3 review.txt | sort
+	(X) sort review.txt | tail -3
+	
+2.	Issue a command to display the lines that start with ford 
+	(upper and lower case), but only the second field of each record from 
+	a colon separated file called cars.colon.
+	
+	grep -iw ^ford cars.colon | cut -d":" -f2
+	^ford 	=› line starts with ford 
+	ford$	=› line ends with ford
+	
+3.	Display only the fourth field of each record in a tab separated file 
+	called animals, and append any error messages to a file called errors.
+	
+	cut -f4 animals 2>> errors
+	
+4.	Display only the third line in a file called words, changing all 
+	alphabets to uppercase.
+	
+	head -3 words | tail -1 | tr [a-z] [A-Z]
+	head -3 words | tail -1 | tr "[a-z]" "[A-Z]"
+	
+5.	Display the number of lines that contain price of at least $10000 
+	in a file called cars. Note that the price for each car is at the 
+	end of the line.
+
+	grep [0-9][0-9][0-9][0-9][0-9]$ cars | wc -l
+	grep -c [0-9][0-9][0-9][0-9][0-9]$ cars
+	** -c will display the number of lines that match the pattern
+	Not line number ==> (X) grep -n [0-9][0-9][0-9][0-9][0-9]$ cars | cut -d':' -f1
+
+6.	Sort the file called students numerically, and append the output to 
+	a file called studentsSorted.
+	
+	sort -n students >> studentsSorted
+	
+7.	Display all the lines in a file called customers that contain a word “John”.
+	
+	grep -w "John" customers
+	** exclude Johnson, Johnny
+
+8.	Issue a command for detailed listing of all files in the /bin directory, 
+	sending the output to a file called bins and discarding any error messages. 
+	
+	ls -l /bin > bins 2> /dev/null
+	(X) ls -l ~/bin > bins 2> /dev/null
+	
+9.	Issue a command to grab lines that contain chevy or Chevy inside a file called 
+	cars, but redirect the output and overwrite to a file called cars.txt.
+	
+	CHEVY, cHEVY, cheVY, cHeVy (are not accepted) ==> (X) grep -i chevy cars > cars.txt
+	
+	grep [cC]hevy cars > cars.txt
+	
+10.	Issue a command to grab lines that start with a number from a file called 
+	numbers.txt, display it to the screen AND append to a file called lines.txt
+	
+	grep ^[0-9] numbers.txt | tee -a lines.txt
+	(X) grep ^[0-9] numbers.txt |tee >> lines.txt (This won't display the result to 	the screen)
+	
+11.	Issue a command to grab only the lines that ends with a postal code (in a form 
+	of A1A1A1), but display only the third field of each record in a comma separated 
+	file called address, sorted in reverse alphabetical order, changed to all 
+	lowercase, redirect and append the output to a file called properAddress.txt 
+	and discard any possible error messages.
+
+	(grep -i [A-Z][0-9][A-Z][0-9][A-Z][0-9]$ address | cut -d"," -f3 | sort -r | 
+	tr "[A-Z]" "[a-z]") 2> /dev/null | tee -a properAddress.txt
+	**Parentheses are required to enclose all the commands so that any possible error 	messages will be discarded. After that, it will display the result to the screen, 	and redirect and append the output to a file called properAddress.txt.
+
+12.     Fill in the blank after grep to get output of cars made in the 80's on                            
+	matrix to be exactly as shown $ grep "_______________" ~mark.fernandes/pub/notes/	data/cars                                      
+                                                                                                  
+	ford    ltd     83      15      10500                                                             
+	Chevy   nova    80      50      3500                                                              
+	honda   accord  81      30      6000                                                              
+	ford    thundbd 84      10      17000                                                             
+	toyota  tercel  82      180     750                                                               
+	ford    bronco  83      25      9525      
+
+	grep "[a-z] *8" ~mark.fernandes/pub/notes/data/cars
+	ford    ltd     83      15      10500
+	Chevy   nova    80      50      3500
+	honda   accord  81      30      6000
+	ford    thundbd 84      10      17000
+	toyota  tercel  82      180     750
+	ford    bronco  83      25      9525
+                                                                                         

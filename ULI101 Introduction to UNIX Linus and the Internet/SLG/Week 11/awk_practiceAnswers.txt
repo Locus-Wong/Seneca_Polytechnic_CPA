@@ -1,0 +1,19 @@
+PRACTICE PROBLEMS ON AWK UTILITY - ANSWERS
+
+1.	add 5th field values from all records and print it from cars
+	a.	awk ‘{n+=$5} END {print n}’ cars
+2.	print the second field of the third and fifth lines of cars
+	a.	awk ‘NR == 3 || NR == 5 {print $2}’ cars
+3.	print only the very last field of the last line
+	a.	awk ‘END {print $NF}’ cars
+4.	count the number of cars that are made by chevy, and print the following: “There are n cars from chevy” where n is the number of chevy cars
+	a.	awk ‘/^[cC]hevy/ {x++} END {print “There are”,x,”cars from chevy”}’ cars
+5.	count the number of cars that are more than $8,000 and print the following: “There are n expensive cars” where n is the number of cars > 8000
+	a.	awk ‘$NF > 8000 {n++} END {print “There are”, n, “expensive cars”}’ cars
+6.	find the most expensive car and print the entire line from cars
+	a.	awk ‘max<$5 {max=$5; line=$0} END {print line}’ cars
+b.	awk ‘{if (m < $5) {m=$5; line=$0}} END {print line}’ cars
+7.	print the total number of lines from cars
+	a.	awk ‘END {print NR}’ cars
+8. count the number of cars that are made in the 80s, calculate the total sum of the prices , then display the following: "n cars are from the 80s, and the total is $x" where n is the number of cars, and x is the total price
+	a. awk '$3 >= 80 && $3 < 90 {n++; x+=$5} END {print n, "cars are from the 80s, and the total is \$" x}' cars 2> /dev/null
