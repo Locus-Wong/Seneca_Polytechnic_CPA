@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Prepared by Shahdad -->
+<title> Web422-Week1</title>
+</head>
+
+<body>
+<p id="demo"></p>
+<script>
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+xhttp.open("GET", "dataset.xml", false);
+//Send the request
+xhttp.send();
+// Read data
+xmlDoc = xhttp.responseXML;
+console.log(xmlDoc);
+//Display data 
+phones = xmlDoc.getElementsByTagName("phoneNo");  
+fnames = xmlDoc.getElementsByTagName("first_name"); 
+
+let output="<table border='1'>"
+for(let i=0; i<phones.length; i++){
+  output += "<tr>";
+  output += "<td>" + phones[i].innerHTML + "</td>";
+  output += "<td>" + fnames[i].innerHTML + "</td>";
+  output += "</tr>";
+}
+output += "</table>"
+document.getElementById("demo").innerHTML = output;
+</script>
+
+</body>
+</html>

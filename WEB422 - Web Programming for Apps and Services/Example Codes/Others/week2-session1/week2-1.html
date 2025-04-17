@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample xhr fecth </title>
+  </head>
+  <body>
+    <script>
+    //Consume API using XHR
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://api.example.com');
+      xhr.onload = function () {
+        console.log(xhr.responseText);
+      };
+      xhr.send();
+    
+      //Consume API using fetch()
+    fetch('https://api.example.com')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+
+
+
+    </script>
+  </body>
+</html>

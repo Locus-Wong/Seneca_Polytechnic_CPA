@@ -1,0 +1,31 @@
+<html>
+<head>
+<!-- Prepared By : Shahdad -->
+<title> WEB422 - Week 1 </title>
+<script>
+function openJSON(){
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) 
+      myFunction(this);
+    }
+	xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=d75b8286c6ff5f318727f9f6325e90a0", true);
+	xmlhttp.send();
+}
+function myFunction(Data) {  
+    var myObj = JSON.parse(Data.responseText);
+    console.log(myObj);
+    //display temperature on the page?
+    document.getElementById("demo").innerHTML = myObj.main.temp;
+    
+}
+</script>
+</head>
+
+
+<body onload=openJSON()>
+<p id="demo"></p>
+
+</body>
+
+</html>

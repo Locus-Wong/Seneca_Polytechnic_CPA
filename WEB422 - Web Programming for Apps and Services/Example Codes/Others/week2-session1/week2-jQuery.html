@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample JQ app</title>
+    <!-- Step 1: add CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1></h1>
+    <button>click me</button>
+    <script>
+          let url="https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=d75b8286c6ff5f318727f9f6325e90a0&units=metric";
+        //Step 2: Add jQuery Block  
+        $(document).ready(function(){
+          $("button").click(function(){
+            $.getJSON(url, function(data){
+                console.log(data);
+            })
+            // $("h1").html("hello").css({'color':'blue'}).hide(3000);
+          })
+        
+        })
+    </script>
+</body>
+</html>
