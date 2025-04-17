@@ -1,0 +1,126 @@
+:root, html, body, #__next {
+	height: 100%;
+}
+
+html {
+	background: #212529;
+}
+
+.input-field {
+	background: none;
+	border: 1px solid #EEEEEE;
+	color: #EEEEEE;
+}
+
+.form-submit {
+	border: 1px solid #EEEEEE;
+}
+
+.content-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: rgb(40, 44, 48);
+}
+
+.product-card {
+	width: 300px;
+	height: 420px;
+	border: 3px solid #EEEEEE;
+	background: rgb(37, 41, 45);
+}
+
+.about-card {
+	width: 400px;
+	border: 3px solid #EEEEEE;
+	background: rgb(37, 41, 45);
+}
+
+.about-card h2,
+.about-card h3,
+.about-card h5,
+.about-card p,
+.about-card a,
+.about-card li,
+.about-card span {
+	color: #EEEEEE;
+}
+
+.product-text {
+	color: #EEEEEE;
+}
+
+.form-label {
+	color: #EEEEEE;
+}
+
+.nav-link {
+	padding: 0 1.5rem;
+	display: block;
+}
+
+.pagination-button {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #BBBBBB;
+	background: rgb(33, 37, 41);
+	color: #EEEEEE;
+}
+
+.pagination-button-disabled {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #BBBBBB;
+	background: #BFBFBF;
+}
+
+.pagination-button:hover {
+	background: #BFBFBF;
+}
+
+.contact-item {
+	list-style-type: none;
+}
+
+.contact-logo {
+	width: 20px;
+}
+
+.form-label {
+	margin-top: 2rem !important;
+}
+
+.form-warning {
+	color: #DD0000;
+	margin-left: 0.75rem;
+}
+
+.footer-link {
+	color: #DDDDDD;
+	text-decoration: none;
+}
+
+.footer-link:hover {
+	color: #EEEEEE;
+}
+
+.account-page {
+	padding: 0 15rem;
+	background: rgb(40, 44, 48);
+}
+
+.account-card {
+	border: 3px solid #EEEEEE;
+	background: rgb(37, 41, 45);
+}
+
+.account-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.account-img {
+	background: rgb(47, 51, 55);
+	border: 3px solid #EEEEEE;
+}
