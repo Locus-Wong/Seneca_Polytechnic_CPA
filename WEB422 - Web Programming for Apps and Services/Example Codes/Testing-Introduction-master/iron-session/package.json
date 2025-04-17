@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "iron-session": "^7.0.6",
+    "iron-session": "^8.0.4",
     "next": "15.3.0",
     "octokit": "^4.1.2",
     "react": "^19.0.0",
